@@ -1,0 +1,25 @@
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+
+@mixin Breakpoint1
+{
+	@media(max-width:508px)
+	{
+		@content;
+	}
+}
+
+@mixin Breakpoint3
+{
+	@media(max-width:410px)
+	{
+		@content;
+	}
+}

@@ -1,0 +1,26 @@
+
+@mixin Breakpoint1
+{
+	@media(max-width:950px)
+	{
+		@content;
+	}
+}
+
+
+@mixin Breakpoint2
+{
+	@media(max-width:701px)
+	{
+		@content;
+	}
+}
+
+
+@mixin Breakpoint3
+{
+	@media(max-width:603px)
+	{
+		@content;
+	}
+}

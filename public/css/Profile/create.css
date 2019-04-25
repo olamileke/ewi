@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+div.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+div.container div.message {
+  width: 10vh;
+  height: 6vh;
+  background: blue;
+}
+div.container div.profilepic {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 1;
+}
+div.container form {
+  position: relative;
+  top: 3vh;
+  width: 450px;
+  padding: 40px 0 30px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 480px) {
+  div.container form {
+    width: 350px;
+  }
+}
+div.container form div.types {
+  position: relative;
+  width: 350px;
+  left: calc((100% - 350px)/2);
+  font-family: "Quicksand", sans-serif;
+}
+@media (max-width: 480px) {
+  div.container form div.types {
+    width: 320px;
+    left: 15px;
+  }
+}
+div.container form p.about {
+  position: relative;
+  left: 50px;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+@media (max-width: 480px) {
+  div.container form p.about {
+    left: 15px;
+  }
+}
+div.container form textarea {
+  position: relative;
+  left: calc((100% - 350px)/2);
+  width: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 480px) {
+  div.container form textarea {
+    width: 320px;
+    left: 15px;
+  }
+}
+div.container form input[type="submit"] {
+  position: relative;
+  left: calc((100% - 80px)/2);
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: 0;
+  background: rgba(18, 97, 160, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  width: 80px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}

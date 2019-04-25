@@ -1,0 +1,32 @@
+
+
+div.tag
+{
+	position:relative;
+}
+
+$primarycolor:#1261a0;
+
+div.tag.element button
+{
+	position:absolute;
+	top:8px;
+	left:79%;
+	display: flex;
+	align-items:center;
+	height:28px;
+	padding:0 5px;
+	font-family: 'Quicksand', sans-serif;
+	border:1px solid rgba($primarycolor,0.6);
+	background:rgba($primarycolor,0.6);
+	color:#fff;
+	border-radius:3px;
+	box-sizing:border-box;
+	font-size:0.8em;
+	cursor:pointer;
+
+	i
+	{
+		margin-right:3px;
+	}
+}

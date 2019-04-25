@@ -1,0 +1,174 @@
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+@mixin Tablet()
+{
+	@media(max-width:900px)
+	{
+		@content;
+	}
+}
+
+@mixin Phone
+{
+	@media(max-width:480px)
+	{
+		@content;
+	}
+}
+
+@mixin SmallPhone
+{
+	@media(max-width:390px)
+	{
+		@content;
+	}
+}
+
+
+body
+{
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+}
+
+
+$headerheight:60px;
+
+header
+{
+	position:fixed;
+	top:0;
+	width:100vw;
+	height:65px;
+	@include flexmixin();
+	justify-content: space-around;
+	z-index:1;
+	transition:all .5s linear;
+	// background:darken(#fff, 30%);
+
+	p
+	{
+		position:relative;
+		top:-3px;
+		left:-17%;
+		font-size:1.6em;
+		font-family: "Trebuchet MS", "sans-serif";
+		color:#fff;
+
+		@include Phone
+		{			
+			left:-14%;			
+		}
+	}
+
+	a
+	{
+		position:relative;
+		top:20px;
+		left:17%;
+		text-decoration:none;
+		outline:none;
+		background:none;
+		padding:5px 10px;
+		border-radius:2px;
+		height:20px;
+		border:1px solid orange;
+		font-family:"Franklin Gothic", "sans-serif";
+		color:#fff;
+		cursor:pointer;
+
+		@include Phone
+		{
+			left:14%;
+		}
+
+		&:hover
+		{
+			background:orange;
+		}
+	}
+}
+
+
+div.landing_page
+{
+	width:100vw;
+	height:100vh;
+	background:linear-gradient(to bottom, rgba(0,0,0,0.5),  rgba(0,0,0,0.5)), url("http://127.0.0.1:8000/Images/Home/african woman.jpg");
+	background-size:cover;
+	background-position: 0 35%;
+	@include flexmixin();
+	justify-content: center;
+	align-items: center;
+
+	@include Tablet()
+	{		
+		background-position:50% 35%;		
+	}
+
+
+	div.content
+	{
+		margin-top:-20px;
+		color:#fff;
+
+		p.title
+		{
+			margin-top:-10px;
+			font-size:5em;
+			text-align: center;
+			font-family: 'Quicksand', sans-serif;
+
+			@include SmallPhone
+			{
+				font-size:4em;
+			}
+		}
+
+		p.content
+		{
+			margin-top:-70px;
+			font-size:2.3em;
+			transform:translateX(5px);
+			text-align: center;
+			font-family: 'Thasadith', sans-serif;
+
+			@include SmallPhone
+			{
+				margin-top:-60px;
+				margin-bottom:23px;
+				font-size:1.9em;
+			}
+		}
+
+		a
+		{
+			position:relative;
+			background:#1261A0;
+			border:none;
+			outline:none;
+			padding:17px 50px;
+			border-radius:5px;
+			color:#fff;
+			font-size:1.3em;
+			font-family: 'Anaheim', sans-serif;
+			cursor:pointer;
+			margin-top:-15px;
+			text-decoration: none;
+
+			@include SmallPhone
+			{
+				padding:10px 30px;
+			}
+		}
+	}
+}

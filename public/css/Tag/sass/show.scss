@@ -1,0 +1,411 @@
+@import '../../Imports/tagshow.scss';
+
+$primarycolor:#1261A0;
+$altwidth:350px;
+$smallwidth:300px;
+
+div.container
+{	
+	min-height:calc(100vh - 63px);
+	width:100vw;
+	@include flexmixin();
+	justify-content:space-around;
+	padding-top:6vh;
+
+	$poemwidth:450px;
+	$poemheight:180px;
+
+	$infowidth:200px;
+	$infoheight:160px;
+
+	@include Breakpoint1
+	{
+		justify-content: center;
+	}
+
+	@include SmallIpad
+	{
+		flex-flow:column;
+		align-items: center;
+		justify-content: normal;
+		padding-top:1vh;
+	}
+
+	div.info
+	{
+		position:relative;
+		left:5vw;
+		width:$infowidth;
+		height:$infoheight;
+		padding:10px;
+		color:rgba(#000,0.6);
+		font-family:'Quicksand', sans-serif;
+		font-size:0.9em;
+
+		@include Breakpoint1
+		{
+			left:-3vw;
+		}
+
+		@include Breakpoint2
+		{
+			left:0;
+		}
+
+		@include SmallIpad
+		{
+			width:450px;
+			padding-left:0;
+			height:110px;
+			@include flexmixin();
+			flex-flow: column;
+			align-items:center;
+		}
+
+		div
+		{
+			@include SmallIpad
+			{
+				@include flexmixin();
+			}
+
+			p
+			{
+				@include SmallIpad
+				{
+					margin-right:20px;
+				}
+			}
+		}
+
+		button
+		{
+			outline:none;
+			background:none;
+			border:1px solid rgba(#000, 0.3);
+			color:rgba(#000,0.6);
+			border-radius:3px;
+			padding:4px;
+			cursor:pointer;
+
+			@include SmallIpad
+			{
+				position:relative;
+				top:-6px;
+			}
+		}
+
+		li
+		{
+			position:relative;
+			left:11px;
+			font-size:0.97em;
+			cursor:pointer;
+		}
+
+		p
+		{
+			margin:0;
+			margin-bottom:10px;
+
+			&.tag
+			{
+				font-size:2em;
+				color:rgba($primarycolor,0.6);
+
+				@include SmallPhone
+				{
+					font-size:1.75em;
+				}
+			}
+		}
+	}
+
+	div.poems
+	{
+		position:relative;
+		width:$poemwidth;
+
+		@include Breakpoint1
+		{
+			left:-3vw;
+		}
+
+		@include SmallIpad
+		{
+			left:0;
+		}
+
+		@include Tab
+		{
+			margin-left:0;
+			width:$poemwidth;
+		}
+
+		@include BigPhone
+		{
+			width:$altwidth;
+		}
+
+		@include SmallPhone
+		{
+			width:$smallwidth;
+		}
+
+		div.poem
+		{
+			position:relative;
+			width:$poemwidth;
+			height:$poemheight;
+			border:1px solid rgba(#000, 0.06);
+			background:#fff;
+			margin-bottom:6vh;
+
+			@include BigPhone
+			{
+				width:100%;
+				height:340px;
+			}
+
+
+			p.time
+			{
+				position:absolute;
+				top:-35px;
+				left:79%;
+				text-align:center;
+				color:#000;
+				border-radius:12px;
+				font-family:"Quicksand", sans-serif;
+				color:rgba(#000, 0.6);
+				font-size:0.85em;
+				height:15px;
+			}
+			
+
+			div.main_content
+			{
+				// margin-top:10px;
+				@include flexmixin();
+				// padding:0 10px;
+				width:100%;
+
+				@include BigPhone
+				{
+					flex-flow:column;
+				}
+
+				div.picture
+				{
+					width:32%;
+					height:180px;
+					background-position:45% 0;
+
+					@include BigPhone
+					{
+						width:100%;
+						height:170px;
+					}
+
+					img
+					{
+						width:100%;
+						height:100%;
+						object-fit:cover;
+					}
+				}
+
+				div.content
+				{
+					position:relative;
+					top:7px;
+					width:calc(70% - 20px);
+					left:17px;
+					@include flexmixin();
+					flex-flow:column;
+
+					@include BigPhone
+					{
+						height:100px;
+						top:-3px;
+						left:-10px;
+						padding:5px 0 0 20px;
+						width:100%;
+						// align-items:center;
+					}
+
+					i
+					{
+						border:1px solid #fff;
+						// color:#fff;
+					}
+
+					span
+					{
+						margin-bottom:12px;
+					}
+
+					span:nth-child(1)
+					{
+						font-family: 'Oswald', sans-serif;
+						font-size:1.2em;
+					}
+
+					span:nth-child(2)
+					{
+						transform:translateY(-1px);
+						font-family: 'Quicksand', serif;
+						color:rgba(#000, 0.65);
+						font-size:0.9em;
+						@include flexmixin();
+
+						div
+						{
+							position:relative;
+							top:-1px;
+							width:25px;
+							height:25px;
+							border-radius:50%;
+							margin-right:8px;
+						}
+
+						p
+						{
+							position:relative;
+							top:-10px;
+						}
+					}
+
+					span.type
+					{
+						position:relative;
+						top:-30px;
+						font-family: 'Quicksand', sans-serif;
+						font-size:0.8em;
+						color:rgba(#000, 0.6);
+					}
+
+					div.ratings
+					{
+						transform:translateY(-34px);
+
+						i.far
+						{
+							color:rgba(gold, 0.5);
+						}
+
+						i.fas
+						{
+							@extend i.far;
+						}
+					}
+
+					span.ratingval
+					{
+						position:relative;
+						top:-30px;
+						left:-8px;
+						margin-left:10px;
+						font-family:'Quicksand', sans-serif;
+						font-size:0.8em;
+						color:rgba(#000,0.75);
+					}
+
+					a
+					{
+						&.read
+						{
+							position:relative;
+							top:-36px;
+							text-decoration:none;
+							color:#fff;
+							padding:5px 10px;
+							width:35px;
+							background:rgba($primarycolor,0.85);
+							border-radius:5px;
+							font-family: "Quicksand", sans-serif;
+							font-size:0.8em;
+						}
+					}
+				}
+			}
+		}
+
+		div:last-child
+		{
+			margin-bottom:0;
+		}
+	}
+
+	div.sidebar
+	{
+		position:relative;
+		left:-2.5vw;
+		width:275px;
+
+		@include Breakpoint1
+		{
+			display:none;
+		}
+
+		div.message
+		{
+			background:#fff;
+			padding:10px 0;
+			text-align:center;
+			border:1px solid rgba(#000, 0.04);
+			font-family:"Quicksand", sans-serif;
+			font-size:0.9em;
+			margin-bottom:2px;
+		}
+
+		$follow_width:40px;
+
+		ul.follows
+		{
+			width:275px;
+			padding:0;
+			background:#fff;
+			padding:15px 0 15px 30px;
+			box-sizing:border-box;
+
+			li
+			{
+				list-style-type:none;
+				// padding:5px 0;
+				@include flexmixin();
+
+				div:nth-child(1)
+				{
+					width:$follow_width;
+					height:$follow_width;
+					border-radius:50%;
+					margin:0 10px 0 0;
+				}
+
+				div:nth-child(2)
+				{					
+					p
+					{
+						transform:translateY(-15px);
+	  					font-family: 'PT Sans', sans-serif;
+					}
+
+					button
+					{
+						transform: translateY(-22px);
+						outline:none;
+						border:1px solid $primarycolor;
+						background:rgba($primarycolor,0.7);
+						color:#fff;
+						border-radius:5px;
+						padding:3px 5px;
+						font-family: 'PT sans', sans-serif;
+						// width:91px;
+						cursor:pointer;
+					}
+				}
+			}
+		}
+	}
+}

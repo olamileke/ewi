@@ -1,0 +1,601 @@
+@import '../../Imports/profileview.scss';
+@import '../../Imports/mediaqueries.scss';
+@import '../../Imports/notifications.scss';
+
+
+
+$primarycolor:#1261a0;
+$actionwidth:400px;
+$actionheight:100px;
+$imgval:50px;
+
+
+button
+{
+	cursor:pointer;
+}
+
+div.container
+{
+	position:relative;
+	top:2vh;
+	left:5vw;
+	width:90vw;
+	min-height:85vh;
+
+	img
+	{	
+		object-fit: cover;	
+	}
+}
+
+
+div.background-div
+{
+	position:relative;
+	height:165px;
+
+
+	&::after
+	{
+		display:block;
+		position:relative;
+		background-image:linear-gradient(to bottom, rgba(0,0,0,0.35),  rgba(0,0,0,0.35));
+		content:'';
+		margin-top: -170px;
+ 		height: 100%;
+  		width: 100%;
+	}
+
+	img
+	{		
+		width:100%;
+		height:100%;
+	}
+
+	button
+	{
+		position:absolute;
+		top:62%;
+		left:63%;
+		z-index:1;
+		padding:6px 4px;
+		color:#fff;
+		background:rgba(dodgerblue,0.7);
+		border:1px solid rgba(dodgerblue,0.7);
+		// font-size:0.7em;
+		outline:none;
+		cursor:pointer;
+		border-radius:3px;
+		font-family:'Quicksand', sans-serif;
+	}
+
+	input[type="file"]
+	{
+		position:absolute;
+		top:80%;
+		left:63%;
+	}
+}
+
+$profilepicval:100px;
+
+div.profile-pic
+{
+	position:absolute;
+	top:65%;
+	left:10%;
+	width:$profilepicval;
+	height:$profilepicval;
+	z-index:1;
+
+	@include Breakpoint1
+	{
+		left:4%;
+	}
+
+	@include Breakpoint2
+	{
+		left:6%;
+	}
+
+	img
+	{		
+		width:100%;
+		height:100%;
+		border-radius:50%;
+	}
+
+	p.name
+	{
+		position:relative;
+		top:-120px;
+		left:260px;
+		width:400px;
+		color:#fff;
+		font-family:'Raleway', sans-serif;
+		text-align: center;
+		font-size:2em;
+		z-index:1;
+	}
+}
+
+
+div.detail
+{
+	position:relative;
+	box-sizing:border-box;
+	@include flexmixin();
+	justify-content: space-around;
+
+	@include Breakpoint2
+	{
+		justify-content: center;
+	}
+
+	@include Breakpoint3
+	{
+		flex-flow:column;
+		align-items:center;
+	}
+}
+
+ul.tabs
+{
+	position:relative;
+	top:40px;
+	width:200px;
+	@include flexmixin();
+	flex-flow: column;
+	box-sizing:border-box;
+
+	$hovercolor:#57a0d3;
+	$i-val:1px;
+
+	@include Breakpoint1
+	{
+		left:-5%;
+	}
+
+	@include Breakpoint2
+	{
+		left:0;
+		left:-48px;
+	}
+
+	@include Breakpoint3
+	{
+		left:-20px;
+		position:absolute;
+		top:50px;
+		flex-flow:row;
+		width:100%;
+		flex-wrap:wrap;
+		box-sizing:border-box;
+		justify-content: center;
+	}
+
+	@include SmallPhone
+	{
+		justify-content: flex-start;
+	}
+
+	li
+	{
+		list-style-type:none;
+		padding:20px;
+		font-family: "Trebuchet MS", sans-serif;
+		color:rgba(#000,0.8);		
+		text-align: center;
+		cursor:pointer;
+
+		&.following, &.followers
+		{
+			@include flexmixin();
+			flex-flow:column;
+			align-items: center;
+			padding-bottom:4px;
+		}
+
+		@include Breakpoint3
+		{
+			padding:6px;
+			margin-right:10px;
+		}
+
+		span
+		{
+			margin-top:3px;
+		}
+
+		&.active
+		{
+			color:#1261A0;
+
+			@include Breakpoint3
+			{
+				background:rgba(#000, 0.1);
+				color:rgba(#000,0.8);
+				border-radius:2px;
+				padding:3px;
+			}
+		}
+
+		&:hover
+		{
+			background:$hovercolor;
+			color:#Fff;
+
+			@include Breakpoint3
+			{
+				background:unset;
+				color:#000;
+			}
+		}
+	}
+}
+
+div.main-detail
+{
+	position:relative;
+	padding-top:4vh;
+	width:400px;
+
+	@include Breakpoint1
+	{
+		margin-right:40px;
+	}
+
+	@include Breakpoint2
+	{
+		margin-right:0;
+	}
+
+	@include Breakpoint3
+	{
+		margin-top:110px;
+	}
+
+	@include BigPhone
+	{
+		width:350px;
+	}
+
+	@include SmallPhone
+	{
+		width:300px;
+	}
+
+	div.about
+	{
+		font-family:"Trebuchet MS", sans-serif;
+		width:100%;
+		line-height:1.6;
+		color:rgba(#000, 0.8);
+	}
+
+	$poemwidth:400px;
+	$poemheight:180px;
+
+	div.poem
+	{
+		position:relative;
+		width:$poemwidth;
+		height:$poemheight;
+		border:1px solid rgba(#000, 0.06);
+		background:#fff;
+		margin-bottom:6vh;
+		z-index:1;
+
+		@include BigPhone
+		{
+			width:100%;
+			height:340px;
+		}			
+
+		div.main_content
+		{
+			// margin-top:10px;
+			@include flexmixin();
+			// padding:0 10px;
+			width:100%;
+
+			@include BigPhone
+			{
+				flex-flow:column;
+			}
+
+			div.picture
+			{
+				width:32%;
+				height:180px;
+				background-position:45% 0;
+
+				@include BigPhone
+				{
+					width:100%;
+					height:170px;
+				}
+
+				img
+				{
+					width:100%;
+					height:100%;
+					object-fit:cover;
+				}
+			}
+
+			div.content
+			{
+				position:relative;
+				top:7px;
+				width:calc(70% - 20px);
+				left:17px;
+				@include flexmixin();
+				flex-flow:column;
+
+				@include BigPhone
+				{
+					height:100px;
+					top:-3px;
+					left:0;
+					padding:5px 0 0 10px;
+					width:100%;
+				}
+
+				i
+				{
+					border:1px solid #fff;
+				}
+
+				span
+				{
+					margin-bottom:12px;
+				}
+
+				span:nth-child(1)
+				{
+					font-family: 'Oswald', sans-serif;
+					font-size:1.2em;
+				}
+
+				span:nth-child(2)
+				{
+					transform:translateY(-1px);
+					font-family: 'Quicksand', serif;
+					color:rgba(#000, 0.65);
+					font-size:0.9em;
+					@include flexmixin();
+
+					div
+					{
+						position:relative;
+						top:-1px;
+						width:25px;
+						height:25px;
+						border-radius:50%;
+						margin-right:8px;
+					}
+
+					p
+					{
+						position:relative;
+						top:-10px;
+					}
+				}
+
+				span.type
+				{
+					position:relative;
+					top:-30px;
+					font-family: 'Quicksand', sans-serif;
+					font-size:0.8em;
+					color:rgba(#000, 0.6);
+				}
+
+				div.ratings
+				{
+					transform:translateY(-34px);
+
+					i.far
+					{
+						color:rgba(gold, 0.5);
+					}
+
+					i.fas
+					{
+						@extend i.far;
+					}
+				}
+
+				span.ratingval
+				{
+					position:relative;
+					top:-30px;
+					left:-8px;
+					margin-left:10px;
+					font-family:'Quicksand', sans-serif;
+					font-size:0.8em;
+					color:rgba(#000,0.75);
+				}
+
+				a
+				{
+					position:relative;
+					top:-36px;
+					text-decoration:none;
+					color:#fff;
+					padding:5px 10px;
+					width:35px;
+					background:rgba($primarycolor,0.85);
+					border-radius:5px;
+					font-family: "Quicksand", sans-serif;
+					font-size:0.8em;
+				}
+			}
+		}
+	}
+
+	div.following 
+	{
+		width:100%;
+	}
+
+	div.followers
+	{
+		width:100%;
+	}
+}
+
+$userheight:100px;
+$user_m_bottom:30px;
+
+div.user
+{
+	width:100%;
+	height:$userheight;
+	margin-bottom:$user_m_bottom;
+	background:darken(#fff,0.2%);
+	@include flexmixin();
+	padding:10px;
+	box-sizing:border-box;
+	border:1px solid rgba(#000,0.06);
+	font-family:'Quicksand', sans-serif;
+	font-size:0.85em;
+
+	@include SmallPhone
+	{
+		flex-flow:column;
+		align-items: center;
+		height:unset;
+	}
+
+	button
+	{
+		@include flexmixin();
+		align-items:center;
+		height:24px;
+		padding:0 5px;
+		font-family: 'Quicksand', sans-serif;
+		border:1px solid rgba($primarycolor,0.6);
+		background:rgba($primarycolor,0.6);
+		color:#fff;
+		border-radius:3px;
+		box-sizing:border-box;
+		font-size:0.8em;
+		cursor:pointer;
+
+		i.fa-user-plus
+		{
+			margin-right:3px;
+		}
+	}
+
+	img
+	{
+		border-radius:50%;
+		object-fit: cover;
+		margin-right:15px;
+	}
+
+	p
+	{
+		margin:0 20px 0 0;
+		@include flexmixin();
+		flex-flow: column;
+		width:60%;
+
+		@include SmallPhone
+		{
+			text-align:center;
+			width:90%;
+			margin-bottom:5px;
+		}
+	}
+
+	span
+	{
+		margin-bottom:4px;
+	}
+
+	a
+	{
+		color:#000;
+		text-decoration:none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+
+div.actions
+{
+	position:relative;
+	padding-top:4vh;
+	width:300px;
+
+	@include Breakpoint2
+	{
+		display:none;
+	}
+
+	div.action
+	{
+		@include flexmixin();
+		align-items:center;
+		padding:10px 20px;
+		box-sizing:border-box;
+		margin-bottom:5px;
+		height:80px;
+
+		p
+		{
+			position:relative;
+			top:-5px;
+			// width:200px;
+			font-family:'Quicksand', sans-serif;
+			font-size:0.85em;
+			line-height:1.4;
+			width:80%;
+			margin-right:5px;
+		}
+
+		img
+		{
+			position:relative;
+			top:-3px;
+		}
+
+		span
+		{
+			position:absolute;
+			top:calc(100% + 2px);
+			left:0;
+			font-size:0.8em;
+		}
+
+		button.view
+		{			
+			margin-left:3px;
+			color:rgba(#000,0.85);
+			padding:1px 4px;
+			border:1px solid rgba(#000, 0.4);
+			background:none;
+			border-radius:3px;
+			font-size:0.95em;
+}
+
+		a
+		{
+			color:#000;
+			text-decoration: none;
+
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+	}
+	
+}

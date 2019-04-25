@@ -1,0 +1,158 @@
+
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+@mixin SmallTablet()
+{
+	@media(max-width:480px)
+	{
+		@content;
+	}
+}
+
+@mixin SmallPhone()
+{
+	@media(max-width:370px)
+	{
+		@content;
+	}
+}
+
+$primarycolor:#1261A0;
+$secondary_color:lighten(orange, 5%);
+
+body
+{
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+}
+
+$primarycolor:#1261A0;
+$sec_color:#3895D3;
+
+
+$messageheight:6vh;
+$messagewidth:10vh;
+
+$formwidth:450px;
+$formheight:600px;
+
+$altwidth:350px;
+
+div.container
+{
+	position:relative;
+	height:100vh;
+	width:100vw;
+	@include flexmixin();
+	flex-flow:column;
+	justify-content: center;
+	align-items: center;
+
+	div.message
+	{
+		width:$messagewidth;
+		height:$messageheight;
+		background:blue;
+	}
+
+	div.profilepic
+	{
+		position:absolute;
+		// top:1vh;
+		width:90px;
+		height:90px;
+		border-radius:50%;
+		z-index:1;
+	}
+
+	form
+	{
+		position:relative;
+		top:3vh;
+		width:$formwidth;
+		// height:$formheight;
+		// background:rgba(#000, 0.01);
+		padding:40px 0 30px 0;
+		border:1px solid rgba(#000, 0.1);
+		box-sizing:border-box;
+		@include flexmixin();
+		flex-flow:column;
+
+		@include SmallTablet()
+		{
+			width:350px;
+		}
+
+		div.types
+		{
+			position:relative;
+			width:350px;
+			left:calc((100% - 350px)/2);
+			font-family:"Quicksand", sans-serif;
+
+			@include SmallTablet
+			{
+				width:320px;				
+				left:15px;
+			}
+		}
+
+		p.about
+		{
+			position:relative;
+			left:50px;
+			position:relative;
+			font-family:"Quicksand", sans-serif;
+
+			@include SmallTablet
+			{
+				left:15px;
+			}
+		}
+
+		textarea
+		{
+			position: relative;
+			left:calc((100% - 350px)/2);
+			width:350px;
+			border:1px solid rgba(#000 ,0.2);
+
+			@include SmallTablet()
+			{
+				width:320px;
+				left:15px;
+			}
+		}
+
+		$submitcolor:#3895D3;
+		$resetcolor:orange;
+
+		input[type="submit"]
+		{
+			position:relative;
+			left:calc((100% - 80px)/2);
+			padding:8px;
+			cursor:pointer;
+			outline:none;
+			color:#fff;
+			font-family: 'Quicksand', sans-serif;
+			border-radius:5px;
+			font-size: 1em;
+			outline:0;
+			background:rgba($primarycolor,0.8);
+			border:1px solid rgba(#000, 0.03);
+			width:80px;
+			box-sizing:border-box;
+			margin-top:20px;
+		}
+	}
+}

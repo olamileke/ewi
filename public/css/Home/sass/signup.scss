@@ -1,0 +1,153 @@
+
+@mixin flexmixin()
+{
+	display:flex;
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+}
+
+$primarycolor:#1261A0;
+
+
+@mixin SmallPhone
+{
+	@media(max-width:375px)
+	{
+		@content;
+	}
+}
+
+body
+{
+	margin:0;
+	padding:0;
+}
+
+$formbodyheight:550px;
+
+#container
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:#3895D3;
+	@include flexmixin();
+	justify-content: center;
+	align-items:center;
+
+	div.form-body
+	{
+		position:absolute;
+		left:calc((100vw - 341px)/2);
+		width:341px;
+		height:$formbodyheight;
+
+		@include SmallPhone
+		{
+			width:300px;
+			left:calc((100vw - 300px)/2);
+		}
+
+		div.alert
+		{
+			position:relative;
+			top:2vh;
+			width:100%;
+			padding:11px 0;
+			text-align: center;
+			color:#fff;
+			font-family:"Helvetica", sans-serif;
+
+			&.success
+			{
+				background: #62B162;
+			}
+		}
+
+		form
+		{
+			width:100%;
+			height:percentage(450/550);	
+			margin-top:4vh;		
+			background:rgba(#fff, 0.7);
+			border-radius:5px;
+			@include flexmixin();
+			flex-flow:column;
+			align-items:center;
+
+			p
+			{
+				position:relative;
+				top:-15px;
+				margin-bottom:-15px;
+				font-size:2em;
+				font-family: 'Quicksand', sans-serif;
+			}
+
+			input
+			{
+				width:80%;
+				margin:10px 0 10px 0;
+				padding:10px 0;
+				outline:none;
+				border:1px solid rgba(#000, 0.3);
+				padding-left:10px;
+				box-sizing: border-box;
+			}
+
+			input[type="submit"]
+			{
+				background:$primarycolor;
+				border:1px solid $primarycolor;
+				color:#fff;
+				font-family:"Trebuchet MS","sans-serif";
+				font-size: 1.1em;
+				cursor:pointer;
+
+				&:active
+				{
+					background:lighten($primarycolor, 5%);
+					border:1px solid lighten($primarycolor, 5%);
+				}
+			}
+
+			p.or
+			{
+				top:-16px;
+				font-size:1.3em;
+			}
+
+			div:nth-child(1n)
+			{
+				position:relative;
+				top:15px;
+
+				a
+				{
+					margin:0 12px 0 12px;
+				}
+			}
+
+			div.login
+			{
+				position:relative;
+				top:30px;
+				font-family:"Trebuchet MS", sans-serif;
+				color:rgba(#000, 0.5);
+
+				a
+				{
+					text-decoration:none;
+					margin:0;
+					font-family: 'Quicksand', sans-serif;
+					color:#000;
+				}
+			}
+		}
+	}
+
+}

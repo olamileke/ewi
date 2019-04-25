@@ -1,0 +1,188 @@
+body.noscroll {
+  overflow: hidden;
+}
+
+div.reply_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+}
+div.reply_background div.reply_container {
+  position: relative;
+  width: 500px;
+  min-height: 160px;
+  background: #fff;
+  margin: 15vh auto;
+  border-radius: 6px;
+  padding: 12px 20px 90px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 508px) {
+  div.reply_background div.reply_container {
+    left: 3vw;
+    width: 94vw;
+    margin: 15vh 0 0 0;
+  }
+}
+@media (max-width: 410px) {
+  div.reply_background div.reply_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.reply_background .closebtn {
+  position: absolute;
+  top: -11px;
+  left: 97%;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #E6E6CC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+@media (max-width: 410px) {
+  div.reply_background .closebtn {
+    left: 96%;
+  }
+}
+div.reply_background .closebtn span, div.reply_background .closebtn span:before, div.reply_background .closebtn span:after {
+  position: relative;
+  top: -3px;
+  left: 0.2px;
+  width: 16px;
+  height: 2px;
+  background: none;
+}
+div.reply_background .closebtn span:before, div.reply_background .closebtn span:after {
+  top: 3px;
+  content: '';
+  transform: rotate(45deg);
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+div.reply_background .closebtn span:after {
+  top: 1px;
+  transform: rotate(-45deg);
+}
+div.reply_background .topInfo {
+  display: flex;
+}
+@media (max-width: 410px) {
+  div.reply_background .topInfo {
+    width: 90%;
+  }
+}
+div.reply_background .topInfo img {
+  position: relative;
+  top: 3px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+@media (max-width: 410px) {
+  div.reply_background .topInfo img {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    left: calc((100% - 50px)/2);
+  }
+  div.reply_background .topInfo img.move-down {
+    top: 60px;
+  }
+}
+div.reply_background .topInfo p {
+  position: relative;
+  top: 9px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+}
+@media (max-width: 410px) {
+  div.reply_background .topInfo p {
+    left: 0;
+    margin-top: 47px;
+  }
+}
+div.reply_background .topInfo p span, div.reply_background .topInfo p .closebtn span:before, div.reply_background .closebtn .topInfo p span:before, div.reply_background .topInfo p .closebtn span:after, div.reply_background .closebtn .topInfo p span:after {
+  margin-top: 6px;
+}
+div.reply_background .topInfo p i {
+  color: rgba(255, 215, 0, 0.5);
+}
+div.reply_background .review {
+  position: relative;
+  top: 13px;
+  left: 55px;
+  width: 75%;
+  font-family: 'PT Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 410px) {
+  div.reply_background .review {
+    left: 0;
+    width: 90%;
+  }
+}
+div.reply_background .review p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.85em;
+}
+div.reply_background .review p i.fa-heart {
+  color: #1261a0;
+  margin-right: 4px;
+}
+div.reply_background textarea {
+  position: relative;
+  top: 35px;
+  left: 52px;
+  width: 75%;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  height: 90px;
+  padding: 5px 8px;
+  border-radius: 6.5px;
+  resize: none;
+  font-family: 'PT Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.85em;
+}
+@media (max-width: 410px) {
+  div.reply_background textarea {
+    left: 0;
+    width: 85%;
+  }
+}
+div.reply_background button {
+  position: absolute;
+  top: calc(100% - 40px);
+  left: 75px;
+  float: left;
+  padding: 6px 4px;
+  background: rgba(18, 97, 160, 0.8);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 3px;
+  border: 1px solid #1261A0;
+  cursor: pointer;
+}
+@media (max-width: 410px) {
+  div.reply_background button {
+    left: 10%;
+    float: right;
+  }
+}

@@ -1,0 +1,124 @@
+@import '../../Imports/loggedin.scss';
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+
+div.container
+{
+	position:relative;
+	left:15vw;
+	width:70vw;
+	min-height:40vw;
+	border:1px solid rgba(#000, 0.08);
+	border-top:none;
+	padding:10px 50px;
+	box-sizing:border-box;
+	background:#fff;
+	@include flexmixin();
+	flex-flow:column;
+	align-items: center;
+
+	@include Breakpoint1
+	{
+		left:5vw;
+		width:90vw;
+	}
+
+	p.message
+	{
+		font-family: 'Quicksand',sans-serif;
+		color:rgba(#000, 0.8);
+		font-size:1.3em;
+		text-align:center;
+	}
+
+	div.follow_container
+	{
+		position:relative;
+		top:3vh;
+		padding:5px 0;
+		@include flexmixin();
+		justify-content: center;
+		box-sizing:border-box;
+		flex-flow:wrap;
+
+		$u_width:200px;
+		$u_height:70px;
+
+		@include Breakpoint1
+		{
+			left:0;
+			width:100%;
+		}
+
+		@include Breakpoint3
+		{
+			top:1vh;
+		}
+
+		div.user
+		{
+			width:$u_width;
+			height:$u_height;
+			$c_val:50px;
+			margin:0 0px 35px 20px;
+
+			@include flexmixin();
+
+			div.picture
+			{
+				width:$c_val;
+				height:$c_val;
+				border-radius:50%;
+				margin-right:10px;
+			}	
+
+			$color:rgba(#1261A0, 0.6);
+
+			div.details
+			{
+				position:relative;
+				top:-19px;
+				@include flexmixin();
+				flex-flow:column;
+				font-family: 'PT Sans', sans-serif;
+				color:rgba(#000, 0.7);
+
+				button
+				{
+					outline:none;
+					border:1px solid $color;
+					background:$color;
+					color:#fff;
+					border-radius:5px;
+					padding:5px 0;
+					font-family: 'Tahoma', sans-serif;
+					width:91px;
+					cursor:pointer;
+
+					i
+					{
+
+						&.fa-user-plus
+						{							
+							transform:translateX(-6px);
+						}
+
+						&.fa-user-check
+						{
+							transform:translateX(-2px);
+						}
+					}
+
+				}
+			}		
+		}
+	}
+}

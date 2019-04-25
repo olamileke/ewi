@@ -1,0 +1,24 @@
+div.tag {
+  position: relative;
+}
+
+div.tag.element button {
+  position: absolute;
+  top: 8px;
+  left: 79%;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 5px;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid rgba(18, 97, 160, 0.6);
+  background: rgba(18, 97, 160, 0.6);
+  color: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+div.tag.element button i {
+  margin-right: 3px;
+}

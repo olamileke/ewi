@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+  transition: all .5s linear;
+}
+header p {
+  position: relative;
+  top: -3px;
+  left: -17%;
+  font-size: 1.6em;
+  font-family: "Trebuchet MS", "sans-serif";
+  color: #fff;
+}
+@media (max-width: 480px) {
+  header p {
+    left: -14%;
+  }
+}
+header a {
+  position: relative;
+  top: 20px;
+  left: 17%;
+  text-decoration: none;
+  outline: none;
+  background: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  height: 20px;
+  border: 1px solid orange;
+  font-family: "Franklin Gothic", "sans-serif";
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  header a {
+    left: 14%;
+  }
+}
+header a:hover {
+  background: orange;
+}
+
+div.landing_page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://127.0.0.1:8000/Images/Home/african woman.jpg");
+  background-size: cover;
+  background-position: 0 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  div.landing_page {
+    background-position: 50% 35%;
+  }
+}
+div.landing_page div.content {
+  margin-top: -20px;
+  color: #fff;
+}
+div.landing_page div.content p.title {
+  margin-top: -10px;
+  font-size: 5em;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 390px) {
+  div.landing_page div.content p.title {
+    font-size: 4em;
+  }
+}
+div.landing_page div.content p.content {
+  margin-top: -70px;
+  font-size: 2.3em;
+  transform: translateX(5px);
+  text-align: center;
+  font-family: 'Thasadith', sans-serif;
+}
+@media (max-width: 390px) {
+  div.landing_page div.content p.content {
+    margin-top: -60px;
+    margin-bottom: 23px;
+    font-size: 1.9em;
+  }
+}
+div.landing_page div.content a {
+  position: relative;
+  background: #1261A0;
+  border: none;
+  outline: none;
+  padding: 17px 50px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.3em;
+  font-family: 'Anaheim', sans-serif;
+  cursor: pointer;
+  margin-top: -15px;
+  text-decoration: none;
+}
+@media (max-width: 390px) {
+  div.landing_page div.content a {
+    padding: 10px 30px;
+  }
+}

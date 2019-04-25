@@ -1,0 +1,255 @@
+body.noscroll {
+  overflow: hidden;
+}
+
+div.new_tag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 1;
+  display: none;
+}
+div.new_tag div.tag {
+  margin: 15vh auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100px;
+  width: 400px;
+  padding-top: 6px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #000;
+}
+@media (max-width: 411px) {
+  div.new_tag div.tag {
+    width: 96vw;
+  }
+}
+div.new_tag div.tag input, div.new_tag div.tag div.container form div.main_content select, div.container form div.main_content div.new_tag div.tag select, div.new_tag div.tag div.container form div.main_content textarea, div.container form div.main_content div.new_tag div.tag textarea {
+  padding: 6px 0 6px 14px;
+  width: 90%;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 12px 0;
+}
+div.new_tag div.tag input:focus, div.new_tag div.tag div.container form div.main_content select:focus, div.container form div.main_content div.new_tag div.tag select:focus, div.new_tag div.tag div.container form div.main_content textarea:focus, div.container form div.main_content div.new_tag div.tag textarea:focus {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.14);
+}
+div.new_tag div.tag div.section {
+  position: relative;
+  top: 2px;
+  width: 100%;
+  padding: 2px 3.3%;
+  box-sizing: border-box;
+}
+div.new_tag div.tag div.section button {
+  float: right;
+  cursor: pointer;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 4px 6px;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.new_tag div.tag div.section button.add {
+  margin-right: 10px;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+div.container form {
+  position: relative;
+  top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 885px) {
+  div.container form {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.container form div.picture {
+  position: relative;
+  top: 2vh;
+  width: 220px;
+  margin-right: 3vw;
+}
+@media (max-width: 885px) {
+  div.container form div.picture {
+    width: 210px;
+    margin-bottom: 65px;
+  }
+}
+@media (max-width: 450px) {
+  div.container form div.picture {
+    width: 150px;
+  }
+}
+div.container form div.picture div.image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.07);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 885px) {
+  div.container form div.picture div.image {
+    height: 210px;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 450px) {
+  div.container form div.picture div.image {
+    height: 150px;
+  }
+}
+div.container form div.picture div.image i {
+  font-size: 3em;
+}
+@media (max-width: 450px) {
+  div.container form div.picture div.image i {
+    font-size: 1.7em;
+  }
+}
+div.container form div.picture input[type="file"], div.container form div.picture div.main_content select[type="file"], div.container form div.main_content div.picture select[type="file"], div.container form div.picture div.main_content textarea[type="file"], div.container form div.main_content div.picture textarea[type="file"] {
+  position: relative;
+  top: 20px;
+  left: 25px;
+}
+@media (max-width: 450px) {
+  div.container form div.picture input[type="file"], div.container form div.picture div.main_content select[type="file"], div.container form div.main_content div.picture select[type="file"], div.container form div.picture div.main_content textarea[type="file"], div.container form div.main_content div.picture textarea[type="file"] {
+    left: 0;
+  }
+}
+div.container form div.main_content {
+  width: 590px;
+  background: #fff;
+  padding: 15px 0 50px 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 885px) {
+  div.container form div.main_content {
+    width: 80vw;
+  }
+}
+@media (max-width: 600px) {
+  div.container form div.main_content {
+    width: 90vw;
+  }
+}
+div.container form div.main_content label {
+  position: relative;
+  left: 12.5%;
+  margin: 15px 0 10px 0;
+  font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 450px) {
+  div.container form div.main_content label {
+    font-size: 0.9em;
+  }
+}
+div.container form div.main_content input, div.container form div.main_content select, div.container form div.main_content textarea {
+  position: relative;
+  left: 12.5%;
+  width: 75%;
+  padding: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+div.container form div.main_content textarea {
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+div.container form div.main_content textarea.description {
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container form div.main_content button {
+  position: relative;
+  top: 15px;
+  left: 12.5%;
+  width: 100px;
+  height: 30px;
+  background: none;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  margin: 8px 0 12px 0;
+}
+div.container form div.main_content button i {
+  color: #1261A0;
+}
+div.container form div.main_content div.tags {
+  position: relative;
+  top: 10px;
+  left: 12.8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container form div.main_content div.tags p {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-right: 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+  border-radius: 15px;
+  font-size: 0.8em;
+  padding: 10px;
+}
+div.container form div.main_content div.tags p i {
+  position: relative;
+  top: -10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+div.container form div.main_content input[type="submit"], div.container form div.main_content select[type="submit"], div.container form div.main_content textarea[type="submit"] {
+  top: 20px;
+  left: 36%;
+  width: 28%;
+  padding: 9px 0;
+  color: #fff;
+  background: rgba(18, 97, 160, 0.8);
+  font-family: "Nanum Gothic", sans-serif;
+  cursor: pointer;
+}
+
+.lds-ring div {
+  border-color: rgba(0, 0, 0, 0.18) transparent transparent transparent !important;
+}

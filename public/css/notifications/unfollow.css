@@ -1,0 +1,89 @@
+body.noscroll {
+  overflow-y: hidden;
+}
+
+div.unfollowcontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+div.dialog {
+  position: relative;
+  width: 400px;
+  height: 150px;
+  background: #fff;
+  margin: 15vh auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+@media (max-width: 410px) {
+  div.dialog {
+    width: 96vw;
+    padding: 10px 5px;
+  }
+}
+div.dialog.tag {
+  justify-content: center;
+  padding-top: 0;
+  height: 135px;
+}
+div.dialog p {
+  margin: 7px 0;
+  font-family: "Trebuchet MS", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.dialog p.title {
+  font-size: 1.2em;
+  color: rgba(18, 97, 160, 0.6);
+  font-family: 'Quicksand', sans-serif;
+}
+div.dialog p.tag {
+  margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+div.img {
+  width: 60px;
+  height: 60px;
+}
+div.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.buttons button {
+  background: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+  padding: 6px 4px;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}

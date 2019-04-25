@@ -1,0 +1,621 @@
+@import '../../Imports/layouts.scss';
+
+#toast-container
+{
+  position:relative; 
+  top:20px;
+  font-family:'Quicksand', sans-serif;
+  font-size:0.9em;
+}
+
+#toast-container div
+{
+  opacity:1 !important;  
+}
+
+body
+{
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+	background:rgba(#000, 0.01);
+
+	&.noscroll
+	{
+		overflow:hidden;
+	}
+}
+
+a
+{
+	color:#000;
+	text-decoration: none;
+	outline:0;
+}
+
+$primarycolor:#1261A0;
+$sec_color:#3895D3;
+$gradientcolor1:#4390BC;
+$gradientcolor2:#52A488;
+
+div.timeline_message
+{
+	position:relative;
+	top:0;
+	@include flexmixin();
+	justify-content:space-around;
+	width:100vw;
+	background:linear-gradient(to right, rgba(orange, 0.7), lighten(#FF7417,18%));
+	color:#fff;
+	font-family: 'Quicksand', sans-serif;
+
+	span
+	{
+		position:absolute;
+		top:7px;
+		left:97%;
+		display:block;
+		width:2px;
+		height:25px;
+		background:none;
+		cursor:pointer;
+	}
+
+	span:after
+	{
+		@extend span;
+		content:'';
+		transform:rotate(45deg);
+		background:#fff;
+	}
+
+	span:before
+	{
+		@extend span:after;
+		transform:rotate(-45deg);
+	}
+}
+
+
+header
+{
+	position:relative;
+	width:100vw;
+	background:rgba($primarycolor,0.8);
+	@include flexmixin();
+	align-items: center;
+	justify-content: space-between;
+	height:63px;
+	padding:0 80px;
+	box-sizing:border-box;
+
+	@include Breakpoint1
+	{
+		padding:0 30px;
+	}
+
+	@include Breakpoint2
+	{
+		padding:0 17px;
+	}
+
+	@include NavBar
+	{
+		padding:0 40px 0 0;
+		justify-content: space-between;
+	}
+
+
+	&.active
+	{
+		position:fixed;
+		top:0;
+	}
+
+	div.page_title
+	{		
+		position:relative;
+		color:#fff;
+		top:5px;
+		font-family: 'Quicksand', sans-serif;
+		font-size:2em;
+		@include flexmixin();
+
+		@include NavBar
+		{
+			font-size:1.7em;
+		}
+
+		a
+		{
+			color:#fff;
+			text-decoration:none;
+			margin-right:15px;
+		}
+
+		div.navtoggle
+		{			
+			cursor:pointer;
+			display:none;
+			background:none;
+
+			@include NavBar
+			{
+				display:block;
+				margin-left:4vw;
+			}
+		}
+
+		span
+		{
+			display:block;
+			position:relative;
+			top:-1px;
+			width:24px;
+			height:2px;
+			background:#fff;
+			transform:translateY(10px);
+			margin:0 12px 0 0;
+		}
+
+		span:before
+		{
+			@extend span;
+			top:-2px;
+			content:'';
+		}
+
+		span:after
+		{
+			@extend span:before;
+			top:4px;
+		}
+	}
+
+	form
+	{
+		position:relative;
+		top:-7px;
+
+		&.search-lg
+		{
+			@include NavBar
+			{
+				display:none;
+			}
+		}
+
+		&.search-sm
+		{
+			@include NavBar
+			{
+				display:block;
+			}
+		}
+
+
+		input[type="text"]
+		{
+			position:relative;
+			border:none;
+			padding:5px 10px 5px 13px;
+			box-sizing:border-box;
+			font-family:"Trebuchet MS", sans-serif;
+			border:1px solid rgba(#000 ,0.2);
+			width:340px;
+			border-radius:2px 2px 0 0;
+
+			@include NavBar
+			{
+				width:80vw;
+				margin-bottom:10px;
+			}
+		}
+
+		input[type="submit"]
+		{
+			position:absolute;
+			left:83.5%;
+			height:100%;
+			background:rgba(orange, 0.8);
+			color:#Fff;
+			border:none;
+			border-left:1px solid orange;
+			border-right:1px solid orange;
+			font-family:'Trebuchet MS', sans-serif;
+			cursor:pointer;
+		}
+
+	}
+
+	ul
+	{
+		@include flexmixin();
+		font-family:"Trebuchet MS", sans-serif;
+
+		&.sidebar
+		{
+			position:relative;
+			top:-1px;
+		}
+
+		@include NavBar
+		{
+			position:fixed !important;
+			top:-15px !important;
+			left:-100vw;
+			display: block;
+			background:linear-gradient(to bottom right, $gradientcolor1, $gradientcolor2);
+			width:100vw;
+			height:100vh;
+			padding:10vh 0 0 30px;
+			box-sizing:border-box;
+			z-index:2;
+		}
+
+		&.active
+		{
+			left:0;
+		}
+
+		span, span:after, span:before
+		{
+			position:absolute;
+			display:none;
+
+			@include NavBar()
+			{				
+				top:15px;
+				left:90%;
+				display:block;
+				width:2px;
+				height:25px;
+				background:none;
+				cursor:pointer;
+			}
+		}
+
+		span:after
+		{
+			content:'';
+			transform:rotate(45deg);
+	 		background:#fff;
+		}
+
+		span:before
+		{
+			content:'';
+			transform:rotate(-45deg);
+	 		background:#fff;
+		}
+
+		li
+		{
+			position:relative;
+			top:3px;
+			list-style:none;
+			margin-right:30px;
+
+			@include NavBar
+			{
+				margin-bottom:10px;
+			}
+
+			a
+			{
+				position:relative;
+				top:23px;
+				color:#fff;
+				text-decoration:none;
+
+				&.notif
+				{
+					@include flexmixin();
+					height:20px;
+
+					p
+					{
+						position:relative;
+						top:-15px;
+						left:5px;
+						background:orange;
+						border-radius:50%;
+						width:20px;
+						height:20px;
+						@include flexmixin();
+						justify-content: center;
+						align-items:center;						
+						font-family:"Franklin Gothic", sans-serif;
+					}
+				}
+
+				i.fa-bell
+				{
+					position:relative;
+					font-size:1.4em;
+
+					&+p
+					{
+						position:absolute;
+						top:-27px;
+						left:8px;
+						border-radius:50%;
+						background:orange;
+						width:20px;
+						height:20px;
+						@include flexmixin();
+						justify-content: center;
+						align-items:center;
+						color:#fff;
+						font-family:"Franklin Gothic", sans-serif;
+					}
+				}
+			}
+
+			p.indicator
+			{
+				position:relative;
+				left:-3%;
+				top:22px;
+				width:110%;
+				height:2px;
+
+				@include NavBar
+				{
+					// height:0;
+					height:2px;
+					top:10px;
+					left:0;
+					width:25px;
+				}
+
+				&.active
+				{
+					background:orange;
+				}
+			}
+
+			&.hover_active
+			{
+				&:hover
+				{						
+					p.indicator
+					{
+						background:#ff598f;
+					}
+				}
+			}
+
+			&.hover
+			{
+				&:hover
+				{
+					p.indicator
+					{
+						background:orange;
+					}
+				}
+			}
+
+			&:last-child
+			{
+				p.indicator
+				{
+					top:16px;
+				}
+			}
+		}
+	}
+
+	$circleval:29px;
+
+	div.profile
+	{
+		@include flexmixin();
+		cursor:pointer;
+		position:relative;		
+		font-family:"PT Sans", sans-serif;
+		width:153px;
+
+		$res-circleval:33px;
+
+		&.sm
+		{
+			display:none;
+			width:unset;
+			@include NavBar
+			{
+				@include flexmixin();
+
+				div
+				{
+					top:8px;
+					width:$res-circleval;
+					height:$res-circleval;
+				}
+
+				i
+				{
+					left:10px;
+				}
+			}
+		}
+
+		&.lg
+		{
+			@include NavBar
+			{
+				display:none;
+			}
+		}
+
+		div
+		{
+			position:relative;
+			top:18px;
+			margin-right:5px;
+			border-radius:50%;
+			width:$circleval;
+			height:$circleval;
+
+			@include NavBar
+			{
+				top:4px;
+				width:$circleval - 8px;
+				height:$circleval - 8px;
+			}
+		}
+
+		p
+		{	
+			position:relative;
+			top:10px;	
+			color:#fff;
+			font-size:0.9em;
+
+			@include NavBar
+			{
+				display:none;
+			}
+		}
+
+		i
+		{
+			position:relative;
+			top:25px;
+			left:8px;
+			color:#fff;
+
+			@include NavBar
+			{
+				top:12px;
+				left:0;
+			}
+		}
+
+		$backcolor:#7EC0EE;
+
+		ul
+		{
+			@include flexmixin();
+			flex-flow:column;
+			position:absolute;
+			top:57px;
+			border-top:1px solid #fff;
+			width:100%;
+			height:180px;
+			left:4px;
+			padding-left:0;
+			background:rgba($primarycolor,0.8);
+			z-index:1;
+			display:none;
+
+
+			&.visible
+			{
+				display:block;
+				@include NavBar
+				{
+					display:none;
+				}
+			}
+
+			li
+			{
+				position:relative;
+				width:100%;							
+				text-align: center;	
+				padding:11px 0;
+
+				&:nth-child(1)
+				{
+					margin-top:-21px;
+					border:none;
+				}
+
+				@include NavBar
+				{
+					left:-10%;
+					padding:15px 0;
+					text-align: right;
+				}
+
+				a
+				{
+					width:100%;
+					font-family:"Quicksand", sans-serif;
+					color:#FFF;		
+					font-size:0.8em;
+					z-index:2;	
+
+					@include NavBar
+					{
+						font-size:0.9em;
+					}	
+				}
+			}
+		}
+	}
+
+	ul.actions
+	{
+		@include flexmixin();
+		flex-flow:column;
+		position:absolute;
+		background:linear-gradient(to bottom right, $gradientcolor1, $gradientcolor2);
+		z-index:1;
+		display:none;
+
+		span
+		{
+			left:6.5%;
+		}
+
+		li
+		{
+			position:relative;
+			@include flexmixin();
+			flex-flow: column;
+			align-items:flex-end;
+
+			@include NavBar
+			{
+				padding:0;
+			}
+
+			a
+			{
+				top:0;
+				font-family:"Trebuchet MS", sans-serif;
+				color:#FFF;						
+				font-size:1em;	
+			}
+
+			p.indicator
+			{	
+				top:-10px;
+				width:25px;
+			}
+		}
+
+
+		&.visible
+		{
+			@include NavBar
+			{
+				display: block;
+				position:fixed;
+				top:-15px;				
+				left:0;
+				width:100vw;
+				height:100vh;
+				z-index:9999;
+				padding:150px 10px 0 0;
+			}
+
+
+		}
+
+	}
+
+}

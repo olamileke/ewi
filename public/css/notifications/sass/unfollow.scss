@@ -1,0 +1,121 @@
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+@mixin makeDialogResponsive
+{
+	@media(max-width:410px)
+	{
+		@content;
+	}
+}
+
+body.noscroll
+{
+	overflow-y:hidden;
+}
+
+div.unfollowcontainer
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:rgba(#000, 0.75);
+	z-index:1000;
+}
+
+
+$dialogwidth:400px;
+$dialogheight:150px;
+$primarycolor:#1261A0;
+
+div.dialog
+{
+	position:relative;
+	width:$dialogwidth;
+	height:$dialogheight;
+	background:#fff;
+	margin:15vh auto;
+	@include flexmixin();
+	flex-flow:column;
+	align-items:center;
+	padding:10px 0;
+	box-sizing: border-box;
+	border-radius:5px;
+	border:1px solid #000;
+
+	@include makeDialogResponsive
+	{
+		width:96vw;
+		padding:10px 5px;
+	}
+
+	&.tag
+	{
+		justify-content: center;
+		padding-top:0;
+		height:135px;
+	}
+
+	p
+	{
+		margin:7px 0;
+		font-family:"Trebuchet MS", sans-serif;
+		color:rgba(#000, 0.6);
+
+		&.title
+		{
+			font-size:1.2em;
+			color:rgba($primarycolor,0.6);
+			font-family:'Quicksand', sans-serif;
+		}
+
+		&.tag
+		{
+			margin-bottom:10px;
+			font-family:'Quicksand', sans-serif;
+			font-size:0.9em;
+			text-align:center;
+		}
+	}
+}
+
+div.img
+{
+	width:60px;
+	height:60px;
+
+	img
+	{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		border-radius:50%;
+	}
+}
+
+div.buttons
+{
+	@include flexmixin();
+
+	button
+	{
+		background:none;
+		outline:none;
+		border:1px solid rgba(#000, 0.3);
+		margin:0 5px;
+		padding:6px 4px;
+		border-radius:3px;
+		color:rgba(#000,0.75);
+		cursor:pointer;
+		font-family:'Quicksand', sans-serif;
+	}
+}

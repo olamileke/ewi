@@ -1,0 +1,337 @@
+div.container {
+  min-height: calc(100vh - 63px);
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 6vh;
+}
+@media (max-width: 1100px) {
+  div.container {
+    justify-content: center;
+  }
+}
+@media (max-width: 680px) {
+  div.container {
+    flex-flow: column;
+    align-items: center;
+    justify-content: normal;
+    padding-top: 1vh;
+  }
+}
+div.container div.info {
+  position: relative;
+  left: 5vw;
+  width: 200px;
+  height: 160px;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9em;
+}
+@media (max-width: 1100px) {
+  div.container div.info {
+    left: -3vw;
+  }
+}
+@media (max-width: 730px) {
+  div.container div.info {
+    left: 0;
+  }
+}
+@media (max-width: 680px) {
+  div.container div.info {
+    width: 450px;
+    padding-left: 0;
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+@media (max-width: 680px) {
+  div.container div.info div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+}
+@media (max-width: 680px) {
+  div.container div.info div p {
+    margin-right: 20px;
+  }
+}
+div.container div.info button {
+  outline: none;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 4px;
+  cursor: pointer;
+}
+@media (max-width: 680px) {
+  div.container div.info button {
+    position: relative;
+    top: -6px;
+  }
+}
+div.container div.info li {
+  position: relative;
+  left: 11px;
+  font-size: 0.97em;
+  cursor: pointer;
+}
+div.container div.info p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+div.container div.info p.tag {
+  font-size: 2em;
+  color: rgba(18, 97, 160, 0.6);
+}
+@media (max-width: 370px) {
+  div.container div.info p.tag {
+    font-size: 1.75em;
+  }
+}
+div.container div.poems {
+  position: relative;
+  width: 450px;
+}
+@media (max-width: 1100px) {
+  div.container div.poems {
+    left: -3vw;
+  }
+}
+@media (max-width: 680px) {
+  div.container div.poems {
+    left: 0;
+  }
+}
+@media (max-width: 596px) {
+  div.container div.poems {
+    margin-left: 0;
+    width: 450px;
+  }
+}
+@media (max-width: 480px) {
+  div.container div.poems {
+    width: 350px;
+  }
+}
+@media (max-width: 370px) {
+  div.container div.poems {
+    width: 300px;
+  }
+}
+div.container div.poems div.poem {
+  position: relative;
+  width: 450px;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  margin-bottom: 6vh;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem {
+    width: 100%;
+    height: 340px;
+  }
+}
+div.container div.poems div.poem p.time {
+  position: absolute;
+  top: -35px;
+  left: 79%;
+  text-align: center;
+  color: #000;
+  border-radius: 12px;
+  font-family: "Quicksand", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.85em;
+  height: 15px;
+}
+div.container div.poems div.poem div.main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content {
+    flex-flow: column;
+  }
+}
+div.container div.poems div.poem div.main_content div.picture {
+  width: 32%;
+  height: 180px;
+  background-position: 45% 0;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content div.picture {
+    width: 100%;
+    height: 170px;
+  }
+}
+div.container div.poems div.poem div.main_content div.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.container div.poems div.poem div.main_content div.content {
+  position: relative;
+  top: 7px;
+  width: calc(70% - 20px);
+  left: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content div.content {
+    height: 100px;
+    top: -3px;
+    left: -10px;
+    padding: 5px 0 0 20px;
+    width: 100%;
+  }
+}
+div.container div.poems div.poem div.main_content div.content i {
+  border: 1px solid #fff;
+}
+div.container div.poems div.poem div.main_content div.content span {
+  margin-bottom: 12px;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(1) {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) {
+  transform: translateY(-1px);
+  font-family: 'Quicksand', serif;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) div {
+  position: relative;
+  top: -1px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) p {
+  position: relative;
+  top: -10px;
+}
+div.container div.poems div.poem div.main_content div.content span.type {
+  position: relative;
+  top: -30px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.container div.poems div.poem div.main_content div.content div.ratings {
+  transform: translateY(-34px);
+}
+div.container div.poems div.poem div.main_content div.content div.ratings i.far, div.container div.poems div.poem div.main_content div.content div.ratings i.fas {
+  color: rgba(255, 215, 0, 0.5);
+}
+div.container div.poems div.poem div.main_content div.content span.ratingval {
+  position: relative;
+  top: -30px;
+  left: -8px;
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.75);
+}
+div.container div.poems div.poem div.main_content div.content a.read {
+  position: relative;
+  top: -36px;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  width: 35px;
+  background: rgba(18, 97, 160, 0.85);
+  border-radius: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8em;
+}
+div.container div.poems div:last-child {
+  margin-bottom: 0;
+}
+div.container div.sidebar {
+  position: relative;
+  left: -2.5vw;
+  width: 275px;
+}
+@media (max-width: 1100px) {
+  div.container div.sidebar {
+    display: none;
+  }
+}
+div.container div.sidebar div.message {
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+div.container div.sidebar ul.follows {
+  width: 275px;
+  padding: 0;
+  background: #fff;
+  padding: 15px 0 15px 30px;
+  box-sizing: border-box;
+}
+div.container div.sidebar ul.follows li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.sidebar ul.follows li div:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+div.container div.sidebar ul.follows li div:nth-child(2) p {
+  transform: translateY(-15px);
+  font-family: 'PT Sans', sans-serif;
+}
+div.container div.sidebar ul.follows li div:nth-child(2) button {
+  transform: translateY(-22px);
+  outline: none;
+  border: 1px solid #1261A0;
+  background: rgba(18, 97, 160, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-family: 'PT sans', sans-serif;
+  cursor: pointer;
+}

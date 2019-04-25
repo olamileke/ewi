@@ -1,0 +1,246 @@
+body {
+  padding-bottom: 70px;
+}
+
+div.container {
+  min-height: calc(100vh -  63px);
+  width: 100vw;
+  padding-top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+div.container div.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  width: 400px;
+  padding: 14px 0 8px 0;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+@media (max-width: 447px) {
+  div.container div.heading {
+    width: 350px;
+  }
+}
+@media (max-width: 367px) {
+  div.container div.heading {
+    width: 310px;
+  }
+}
+div.container div.heading div {
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+}
+div.container div.heading div span {
+  font-family: 'Aleo', serif;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.75);
+}
+div.container div.heading p {
+  position: relative;
+  top: 9px;
+  height: 2px;
+  background: #3895D3;
+  margin: 0 0 0 0;
+}
+div.container div.heading p.following {
+  left: 15.6%;
+  width: 79px;
+}
+@media (max-width: 447px) {
+  div.container div.heading p.following {
+    left: 14%;
+  }
+}
+@media (max-width: 367px) {
+  div.container div.heading p.following {
+    left: 12%;
+  }
+}
+div.container div.heading p.you {
+  left: 71%;
+  width: 36px;
+}
+@media (max-width: 447px) {
+  div.container div.heading p.you {
+    left: 70.4%;
+  }
+}
+@media (max-width: 367px) {
+  div.container div.heading p.you {
+    left: 70%;
+  }
+}
+div.container div.follow_actions, div.container div.your_actions {
+  margin-top: 4vh;
+  width: 400px;
+  display: none;
+}
+@media (max-width: 447px) {
+  div.container div.follow_actions, div.container div.your_actions {
+    width: 350px;
+  }
+}
+@media (max-width: 367px) {
+  div.container div.follow_actions, div.container div.your_actions {
+    width: 310px;
+  }
+}
+div.container div.follow_actions.active, div.container div.active.your_actions {
+  display: block;
+}
+div.container div.follow_actions div.action, div.container div.your_actions div.action {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-bottom: 27px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+}
+@media (max-width: 447px) {
+  div.container div.follow_actions div.action, div.container div.your_actions div.action {
+    padding-left: 10px;
+    height: 120px;
+  }
+}
+div.container div.follow_actions div.action div.picture, div.container div.your_actions div.action div.picture {
+  width: 50px;
+  height: 50px;
+  margin-right: 18px;
+}
+@media (max-width: 367px) {
+  div.container div.follow_actions div.action div.picture, div.container div.your_actions div.action div.picture {
+    width: 38px;
+    height: 38px;
+  }
+}
+div.container div.follow_actions div.action div.picture img, div.container div.your_actions div.action div.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+div.container div.follow_actions div.action button, div.container div.your_actions div.action button {
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 367px) {
+  div.container div.follow_actions div.action button i, div.container div.your_actions div.action button i {
+    display: none;
+  }
+}
+div.container div.follow_actions div.action button.follow, div.container div.your_actions div.action button.follow {
+  position: relative;
+  top: 3px;
+  left: -7px;
+  padding: 6px 4px;
+  background: rgba(18, 97, 160, 0.6);
+}
+@media (max-width: 367px) {
+  div.container div.follow_actions div.action button.follow, div.container div.your_actions div.action button.follow {
+    padding: 4px 6px;
+  }
+}
+div.container div.follow_actions div.action button.mark, div.container div.your_actions div.action button.mark {
+  position: absolute;
+  top: -30px;
+  left: 82%;
+  padding: 6px 4px;
+  background: rgba(255, 165, 0, 0.68);
+  font-size: 0.6em;
+}
+div.container div.follow_actions div.action p, div.container div.your_actions div.action p {
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85em;
+  width: 60%;
+  line-height: 1.5;
+}
+div.container div.follow_actions div.action p a, div.container div.your_actions div.action p a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 5px;
+}
+div.container div.follow_actions div.action p a:hover, div.container div.your_actions div.action p a:hover {
+  text-decoration: underline;
+}
+div.container div.follow_actions div.action p button, div.container div.your_actions div.action p button {
+  color: rgba(0, 0, 255, 0.5);
+}
+div.container div.follow_actions div.action p button.view, div.container div.your_actions div.action p button.view {
+  margin-left: 3px;
+  color: rgba(0, 0, 0, 0.85);
+  padding: 1px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: none;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+div.container div.follow_actions div.action p span, div.container div.your_actions div.action p span {
+  margin-left: 5px;
+}
+div.container div.follow_actions div.action p span i, div.container div.your_actions div.action p span i {
+  font-size: 0.7em;
+  color: rgba(255, 215, 0, 0.5);
+}
+div.container div.follow_actions div.action p span.time, div.container div.your_actions div.action p span.time {
+  margin-left: 0;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 2px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8em;
+}
+div.container div.follow_actions div.action li, div.container div.your_actions div.action li {
+  font-family: 'Quicksand', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8em;
+  cursor: pointer;
+}
+div.container div.follow_actions div.action div.action_picture, div.container div.your_actions div.action div.action_picture {
+  position: relative;
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 367px) {
+  div.container div.follow_actions div.action div.action_picture, div.container div.your_actions div.action div.action_picture {
+    width: 41px;
+    height: 41px;
+  }
+}
+div.container div.follow_actions div.action div.action_picture img, div.container div.your_actions div.action div.action_picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+div.container div.follow_actions div:last-child, div.container div.your_actions div:last-child {
+  margin-bottom: 0px;
+}
+div.container div.your_actions {
+  display: none;
+}

@@ -1,0 +1,15 @@
+@mixin ActionResp()
+{
+	@media(max-width:447px)
+	{
+		@content;
+	}
+}
+
+@mixin ActionResp2()
+{
+	@media(max-width:367px)
+	{
+		@content;
+	}
+}

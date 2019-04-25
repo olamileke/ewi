@@ -1,0 +1,99 @@
+div.container {
+  position: relative;
+  left: 15vw;
+  width: 70vw;
+  min-height: 40vw;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: none;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+@media (max-width: 950px) {
+  div.container {
+    left: 5vw;
+    width: 90vw;
+  }
+}
+div.container p.message {
+  font-family: 'Quicksand',sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.3em;
+  text-align: center;
+}
+div.container div.follow_container {
+  position: relative;
+  top: 3vh;
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-flow: wrap;
+}
+@media (max-width: 950px) {
+  div.container div.follow_container {
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 603px) {
+  div.container div.follow_container {
+    top: 1vh;
+  }
+}
+div.container div.follow_container div.user {
+  width: 200px;
+  height: 70px;
+  margin: 0 0px 35px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.follow_container div.user div.picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+div.container div.follow_container div.user div.details {
+  position: relative;
+  top: -19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  font-family: 'PT Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container div.follow_container div.user div.details button {
+  outline: none;
+  border: 1px solid rgba(18, 97, 160, 0.6);
+  background: rgba(18, 97, 160, 0.6);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 0;
+  font-family: 'Tahoma', sans-serif;
+  width: 91px;
+  cursor: pointer;
+}
+div.container div.follow_container div.user div.details button i.fa-user-plus {
+  transform: translateX(-6px);
+}
+div.container div.follow_container div.user div.details button i.fa-user-check {
+  transform: translateX(-2px);
+}

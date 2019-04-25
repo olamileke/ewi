@@ -1,0 +1,49 @@
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+
+@mixin Breakpoint1
+{
+	@media(max-width:1270px)
+	{
+		@content;
+	}
+}
+
+@mixin Breakpoint2
+{
+	@media(max-width: 1120px)
+	{
+		@content;
+	}
+}
+
+@mixin Breakpoint3
+{
+	@media(max-width:1100px)
+	{
+		@content;
+	}
+}
+
+@mixin Breakpoint4
+{
+	@media(max-width:780px)
+	{
+		@content;
+	}
+}
+
+@mixin SmallestPerson
+{
+	@media(max-width:400px)
+	{
+		@content;
+	}
+}

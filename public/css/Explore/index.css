@@ -1,0 +1,17 @@
+div.tabs {
+  left: 15vw;
+}
+div.tabs button {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1120px) {
+  div.tabs {
+    left: 7vw;
+  }
+}
+@media (max-width: 680px) {
+  div.tabs {
+    left: 0;
+  }
+}

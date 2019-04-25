@@ -1,0 +1,238 @@
+@import '../../Imports/replycontainer.scss';
+
+
+body.noscroll
+{
+	overflow:hidden;
+}
+
+
+div.InfoContainer
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:rgba(#000, 0.75);
+	z-index:1000;
+
+	$infowidth:500px;
+	$infoheight:160px;
+
+	img
+	{
+		object-fit:cover;
+		border-radius:50%;
+		margin-right:15px;
+
+		@include Breakpoint3
+		{
+			position:absolute;
+			top:10px;
+			width:50px;
+			height:50px;
+			left:calc((100% - 50px)/2);
+
+			&.move-down
+			{
+				top:60px;
+			}
+		}
+	}
+
+	$btnval:27px;
+
+	.closebtn
+	{
+		position:absolute;
+		left:97%;
+		top:-10px;
+		width:$btnval;
+		height:$btnval;
+		border-radius:50%;
+		background:#E6E6CC;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		cursor:pointer;
+		z-index:1;
+
+		@include Breakpoint3
+		{
+			left:96%;
+		}
+
+		span
+		{
+			position:relative;
+			top:-3px;
+			width:16px;
+			height:2px;
+			background:none;
+		}
+
+		span:before
+		{
+			@extend span;
+			top:2.5px;
+			content:'';
+			transform:rotate(45deg);
+			background:rgba(#000,0.5);
+			display: block;
+		}
+
+		span:after
+		{
+			@extend span:before;
+			top:0;
+			transform:rotate(-45deg);
+			
+		}
+	}
+
+	.info
+	{
+		position:relative;
+		margin:15vh auto;
+		width:$infowidth;
+		min-height:$infoheight;
+		background:#fff;
+		border-radius:4px;
+		border:1px solid rgba(#000, 0.39);
+		padding:15px 20px;
+		box-sizing: border-box;
+
+		@include Breakpoint1
+		{
+			width:94vw;
+		}
+
+		@include Breakpoint3
+		{
+			@include flexmixin();
+			flex-flow:column;
+			align-items:center;
+		}
+	}
+
+	.topInfo
+	{
+		display:flex;
+
+		@include Breakpoint3
+		{
+			width:90%;
+		}
+
+		p
+		{
+			position:relative;
+			top:6px;
+			font-family: 'Noto Sans KR', sans-serif;
+			color:rgba(#000, 0.65);
+			display:flex;
+			flex-flow:column;
+			margin:0;
+
+			@include Breakpoint3
+			{
+				left:0;
+				margin-top:47px;
+			}
+
+			span
+			{
+				margin-top:6px;
+			}
+
+			i
+			{
+				color:rgba(gold, 0.5);
+			}
+		}
+	}
+
+	.review
+	{
+		position:relative;
+		top:13px;
+		left:55px;
+		width:75%;
+		font-family: 'PT Sans', sans-serif;
+		color:rgba(#000, 0.7);
+
+		@include Breakpoint3
+		{
+			left:0;
+			width:90%;
+		}
+
+		p
+		{
+			color:rgba(#000, 0.5);
+			font-size:0.85em;
+
+			i
+			{
+
+				&.fa-heart
+				{					
+					color:#1261a0;
+					margin-right:4px;
+				}
+			}
+		}
+	}
+}
+
+
+// LOADER CSS STYLES
+
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  top:calc((100% - 64px)/2);
+  left:calc((100% - 64px)/2);
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  margin: 3px;
+  border: 3px solid rgba(#1261A0,0.3);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color:rgba(#1261A0,0.3) transparent transparent transparent;
+
+  &.explore
+  {
+  	width:75px;
+  	height:75px;
+  	border-width:4px;
+  	border-color:rgba(#1261A0,0.8) transparent transparent transparent;
+  }
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

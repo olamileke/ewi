@@ -1,0 +1,750 @@
+body {
+  background: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+button {
+  outline: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+div.container {
+  margin: 13px auto;
+  width: 683px;
+}
+@media (max-width: 710px) {
+  div.container {
+    width: 100vw;
+  }
+}
+div.container div.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 250px;
+  padding: 0 0 0 10px;
+}
+@media (max-width: 710px) {
+  div.container div.details {
+    width: 70%;
+    margin: 160px auto;
+    flex-flow: column-reverse;
+    padding: 0;
+  }
+}
+@media (max-width: 560px) {
+  div.container div.details {
+    width: 83%;
+  }
+}
+@media (max-width: 410px) {
+  div.container div.details {
+    width: 91%;
+  }
+}
+div.container div.details div.metadata {
+  width: 50%;
+}
+@media (max-width: 710px) {
+  div.container div.details div.metadata {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.container div.details div.metadata p.title {
+  font-size: 2.5em;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 80%;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 10px 0;
+}
+@media (max-width: 710px) {
+  div.container div.details div.metadata p.title {
+    text-align: center;
+    font-size: 1.7em;
+    width: 100%;
+  }
+}
+div.container div.details div.metadata div.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.details div.metadata div.user img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+div.container div.details div.metadata div.user p {
+  transform: translateY(-5px);
+  font-family: 'Trebuchet MS', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  margin-right: 20px;
+}
+div.container div.details div.metadata div.user li {
+  position: relative;
+  top: 13px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+}
+div.container div.details div.metadata div.user button {
+  position: relative;
+  top: 8px;
+  left: -10px;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8em;
+  height: 28px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 3px 8px;
+  background: none;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+div.container div.details div.metadata div.user button:hover {
+  color: #fff;
+  background: rgba(18, 97, 160, 0.7);
+  border: 1px solid rgba(18, 97, 160, 0.7);
+}
+div.container div.details div.metadata div.type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+div.container div.details div.metadata div.type a {
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 710px) {
+  div.container div.details div.metadata div.type {
+    position: relative;
+    top: -8px;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.container div.details div.metadata div.type span {
+  position: relative;
+  top: 2px;
+  left: 10px;
+  font-size: 0.9em;
+  margin-left: 3px;
+}
+@media (max-width: 710px) {
+  div.container div.details div.metadata div.type span {
+    left: 0;
+    margin-top: 5px;
+  }
+}
+div.container div.details div.metadata div.type span i.fas {
+  position: relative;
+  top: -1px;
+  left: -3px;
+  color: rgba(255, 215, 0, 0.5);
+  margin-right: -4px;
+}
+div.container div.details div.metadata p.time {
+  transform: translateY(7.5px);
+  margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+div.container div.details div.metadata div.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  transform: translateY(18px);
+}
+div.container div.details div.metadata div.actions i.fas.fa-star {
+  color: gold;
+}
+div.container div.details div.metadata div.actions button {
+  background: none;
+  outline: none;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: 'Quicksand', sans-serif;
+  margin-right: 7px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+div.container div.details div.metadata div.actions button:hover {
+  color: #fff;
+  background: rgba(18, 97, 160, 0.7);
+  border: 1px solid rgba(18, 97, 160, 0.7);
+}
+div.container div.details div.picture {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+@media (max-width: 710px) {
+  div.container div.details div.picture {
+    width: 100%;
+    height: 200px;
+  }
+}
+div.container div.details div.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.container p.content {
+  margin: 50px auto;
+  width: 60%;
+  line-height: 2.5;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 710px) {
+  div.container p.content {
+    margin-top: -120px;
+  }
+}
+@media (max-width: 500px) {
+  div.container p.content {
+    width: 80%;
+  }
+}
+div.container p.content + p {
+  position: relative;
+  transform: translateY(-32px);
+  margin: 0;
+  left: 20%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4em;
+}
+@media (max-width: 500px) {
+  div.container p.content + p {
+    left: 7.5%;
+  }
+}
+div.container div.tagscontainer {
+  width: 60%;
+  margin: -8px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 500px) {
+  div.container div.tagscontainer {
+    width: 85%;
+  }
+}
+div.container div.tagscontainer div.tag {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  padding: 8px 5px;
+  margin-right: 15px;
+  border-radius: 7px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.02);
+}
+div.container div.tagscontainer div.tag a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+div.container div.author {
+  margin: 30px auto;
+  width: 63%;
+  padding: 25px 20px 25px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 660px) {
+  div.container div.author {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  div.container div.author {
+    width: 85%;
+  }
+}
+div.container div.author img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+div.container div.author div p:nth-child(1) {
+  margin: 0 0 5px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+}
+div.container div.author div p:nth-child(2) {
+  font-family: 'Nanum Gothic', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.9em;
+}
+@media (max-width: 660px) {
+  div.container div.author div p:nth-child(2) {
+    width: 95%;
+  }
+}
+div.container div.author div li {
+  position: relative;
+  top: 6px;
+  left: 11px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+div.container div.author div button {
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+  border: 1px solid rgba(18, 97, 160, 0.8);
+  padding: 5px;
+  background: rgba(18, 97, 160, 0.8);
+  color: #Fff;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+div.container div.review {
+  margin: 0 auto;
+  width: 63%;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 660px) {
+  div.container div.review {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  div.container div.review {
+    width: 85%;
+  }
+}
+div.container div.review a {
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+div.container div.rated {
+  margin: 30px 0 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+div.container div.rated div {
+  margin-bottom: 13px;
+}
+div.container div.rated div i {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2em;
+  margin-right: 6px;
+}
+div.container div.rated div i.fas {
+  color: rgba(255, 215, 0, 0.5);
+}
+div.container div.rated button {
+  color: #fff;
+  background: rgba(18, 97, 160, 0.7);
+  font-family: 'Quicksand', sans-serif;
+  padding: 6px 11px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid rgba(18, 97, 160, 0.4);
+  cursor: pointer;
+}
+div.container div.rated p {
+  font-family: 'Quicksand', sans-serif;
+}
+div.container div.commentscontainer {
+  margin: 30px auto;
+  width: 63%;
+}
+@media (max-width: 660px) {
+  div.container div.commentscontainer {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  div.container div.commentscontainer {
+    width: 85%;
+  }
+}
+div.container div.commentscontainer div.no_of_comments {
+  font-family: "Trebuchet MS", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+}
+div.container div.commentscontainer div.no_of_comments + p {
+  position: relative;
+  top: 5px;
+  height: 2px;
+  width: 50px;
+  background: orange;
+  margin: 0 0 25px 0;
+}
+div.container div.commentscontainer div.comment {
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 28px;
+}
+div.container div.commentscontainer div.comment span.time {
+  transform: translateY(-2px);
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.5);
+  float: right;
+}
+div.container div.commentscontainer div.comment div.commentdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.9em;
+}
+div.container div.commentscontainer div.comment div.commentdetails img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+div.container div.commentscontainer div.comment div.commentdetails p {
+  transform: translate(5px, -15px);
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+div.container div.commentscontainer div.comment div.commentdetails p span i {
+  color: rgba(255, 215, 0, 0.45);
+}
+div.container div.commentscontainer div.comment div.commentbody {
+  position: relative;
+  top: -8px;
+  left: 43px;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.7);
+  width: 90%;
+}
+div.container div.commentscontainer div.comment div:nth-child(4) {
+  position: relative;
+  left: 45px;
+}
+div.container div.commentscontainer div.comment div:nth-child(4) i.fa-heart {
+  color: rgba(18, 97, 160, 0.55);
+  cursor: pointer;
+}
+div.container div.commentscontainer div.comment div:nth-child(4) span {
+  margin: 0 16px 0 5px;
+}
+div.container div.commentscontainer div.comment div:nth-child(4) button {
+  transform: translateY(-1.5px);
+  border: none;
+  background: none;
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8em;
+  border-radius: 3px;
+  padding: 3px 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+div.container div.commentscontainer div.replycontainer {
+  position: relative;
+  left: 43px;
+  font-size: 0.8em;
+  padding-left: 5px;
+  margin-top: 10px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  width: 90%;
+  box-sizing: border-box;
+}
+div.container div.commentscontainer div.replycontainer div.reply {
+  margin-bottom: 10px;
+  width: calc(100% - 43px);
+}
+div.container div.commentscontainer div.replycontainer div.reply div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.commentscontainer div.replycontainer div.reply p {
+  position: relative;
+  margin: 0;
+}
+div.container div.commentscontainer div.replycontainer div.reply p.reply {
+  left: 34px;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container div.commentscontainer div.replycontainer div.reply p.detail {
+  top: 4px;
+  left: 7px;
+}
+div.container div.commentscontainer div.replycontainer div.reply img {
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+div.container button.more {
+  position: relative;
+  left: calc(82% - 80px);
+  background: none;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  padding: 6px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.75em;
+}
+div.container button.more img {
+  position: relative;
+  top: 3px;
+  left: 1px;
+  animation: animate linear 1.6s infinite;
+  margin-bottom: 1px;
+}
+
+#review div.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+#review div.container p:nth-child(1) {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 0;
+}
+#review div.container div.rate i {
+  font-size: 1.8em;
+  color: rgba(0, 0, 0, 0.55);
+}
+#review div.container div.rate i.fas {
+  color: rgba(255, 215, 0, 0.5);
+}
+#review div.container div.comment {
+  margin-top: 20px;
+  width: 75%;
+}
+@media (max-width: 520px) {
+  #review div.container div.comment {
+    width: 85%;
+  }
+}
+@media (max-width: 430px) {
+  #review div.container div.comment {
+    width: 100%;
+  }
+}
+#review div.container div.comment textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  height: 150px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-family: 'Quicksand',sans-serif;
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+#review div.container div.comment button {
+  border: 1px solid rgba(18, 97, 160, 0.8);
+  background: rgba(18, 97, 160, 0.9);
+  outline: none;
+  padding: 6px 4px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+div.related_poems {
+  position: relative;
+  margin-top: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0;
+}
+div.related_poems div.poem {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  width: 320px;
+  height: 342px;
+  margin: 0 30px 30px 0;
+}
+div.related_poems div.poem:nth-child(3) {
+  margin-right: 0;
+}
+@media (max-width: 1400px) {
+  div.related_poems div.poem:last-child {
+    display: none;
+  }
+}
+@media (max-width: 1019px) {
+  div.related_poems div.poem:last-child {
+    display: inherit;
+    margin-right: 0;
+  }
+  div.related_poems div.poem:nth-child(2) {
+    margin-right: 0;
+  }
+  div.related_poems div.poem:nth-child(3) {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 669px) {
+  div.related_poems div.poem:nth-child(1), div.related_poems div.poem:nth-child(3) {
+    left: 16px;
+  }
+}
+div.related_poems div.poem div.picture {
+  width: 100%;
+  height: 165px;
+}
+div.related_poems div.poem div.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.related_poems div.poem div.content {
+  position: relative;
+  width: 100%;
+  height: 177px;
+  background: #fff;
+  padding: 0 0 0 11px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+div.related_poems div.poem div.content p:nth-child(1) {
+  position: relative;
+  top: -10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+}
+div.related_poems div.poem div.content p:nth-child(2) {
+  position: relative;
+  top: -22px;
+}
+div.related_poems div.poem div.content p:nth-child(2) img {
+  border-radius: 50%;
+  margin-right: 5px;
+  object-fit: cover;
+}
+div.related_poems div.poem div.content p:nth-child(2) span {
+  position: relative;
+  top: -8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.related_poems div.poem div.content p:nth-child(3) {
+  position: relative;
+  top: -32px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+div.related_poems div.poem div.content p:nth-child(3) a {
+  color: rgba(0, 0, 0, 0.7);
+}
+div.related_poems div.poem div.content div.ratings {
+  position: relative;
+  top: -40px;
+}
+div.related_poems div.poem div.content div.ratings i {
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  color: rgba(255, 215, 0, 0.5);
+}
+div.related_poems div.poem div.content div.ratings span {
+  margin-left: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+}
+div.related_poems div.poem div.content a.read {
+  position: relative;
+  top: -24px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(18, 97, 160, 0.8);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8em;
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

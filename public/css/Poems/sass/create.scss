@@ -1,0 +1,311 @@
+@import '../../Imports/createpoems.scss';
+
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+$picwidth:150px;
+$picheight:170px;
+
+$primarycolor:#1261A0;
+
+
+body
+{
+	&.noscroll
+	{
+		overflow:hidden;
+	}
+}
+
+div.new_tag
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background:rgba(#000, 0.78);
+	z-index:1;
+	$divwidth:400px;
+	$divheight:100px;
+	display:none;
+
+	div.tag
+	{
+		margin:15vh auto;
+		@include flexmixin();
+		flex-flow:column;
+		align-items:center;
+		height:$divheight;
+		width:$divwidth;
+		padding-top:6px;	
+		background:#fff;
+		border-radius:3px;
+		border:1px solid #000;
+
+		@include Breakpoint4
+		{
+			width:96vw;
+		}
+
+		input
+		{
+			padding:6px 0 6px 14px;
+			width:90%;
+			border-radius:3px;
+			background:rgba(#000, 0.02);
+			border:1px solid rgba(#000, 0.1);
+			margin:12px 0;
+
+			&:focus
+			{
+				background: rgba(#000, 0.05);
+				border:1px solid rgba(#000,0.14);
+			}
+		}
+
+		div.section
+		{
+			position:relative;
+			top:2px;
+			width:100%;
+			padding:2px 3.3%;
+			box-sizing:border-box;
+
+			button
+			{
+				float:right;
+				cursor:pointer;
+				background:none;
+				border:1px solid rgba(#000, 0.4);
+				padding:4px 6px;
+				border-radius:2px;
+				color:rgba(#000, 0.6);
+
+				&.add
+				{
+					margin-right:10px;
+				}
+			}
+		}
+	}
+}
+
+div.container
+{
+	@include flexmixin();
+	justify-content: center;
+	width:100vw;
+
+	$picturewidth:220px;
+	$pictureheight:300px;
+
+	form
+	{
+		position:relative;
+		top:2vh;
+		@include flexmixin();
+
+		@include Breakpoint1
+		{
+			flex-flow:column;
+			align-items:center;
+		}
+
+		div.picture
+		{
+			position:relative;
+			top:2vh;
+			width:$picturewidth;
+			margin-right:3vw;
+
+			@include Breakpoint1
+			{
+				width:210px;
+				margin-bottom:65px;
+			}
+
+			@include Breakpoint3
+			{
+				width:150px;
+			}
+
+			div.image
+			{
+				position:relative;
+				width:100%;
+				height:$pictureheight;
+				background:rgba(#000, 0.07);
+				@include flexmixin();
+				align-items:center;
+				justify-content: center;
+
+				@include Breakpoint1
+				{
+					height:210px;
+					border-radius:50%;
+				}
+
+				@include Breakpoint3
+				{
+					height:150px;
+				}
+
+				i
+				{
+					font-size:3em;
+
+					@include Breakpoint3
+					{
+						font-size:1.7em;
+					}
+				}
+			}
+
+			input[type="file"]
+			{
+				position:relative;
+				top:20px;
+				left:25px;
+
+				@include Breakpoint3
+				{
+					left:0;
+				}	
+			}
+		}
+
+		div.main_content
+		{
+			width:590px;
+			background:#fff;
+			padding:15px 0 50px 0;
+			box-sizing:border-box;
+			border:1px solid rgba(#000, 0.05);
+			@include flexmixin();
+			flex-flow:column;
+
+			@include Breakpoint1
+			{
+				width:80vw;
+			}
+
+			@include Breakpoint2
+			{
+				width:90vw;
+			}
+
+			label
+			{
+				position:relative;
+				left:12.5%;
+				margin:15px 0 10px 0;
+				font-family: 'Quicksand', sans-serif;
+
+				@include Breakpoint3
+				{
+					font-size:0.9em;
+				}
+			}
+
+			input
+			{
+				position:relative;
+				left:12.5%;
+				width:75%;
+				padding:7px;
+				border:1px solid rgba(#000, 0.07);
+				border-radius:5px;
+				padding-left:10px;				
+				font-family:"Trebuchet MS", sans-serif;
+			}
+
+			select
+			{
+				@extend input;
+			}
+
+			textarea
+			{
+				@extend input;				
+				padding:15px;
+				box-sizing:border-box;
+				font-size:1em;
+
+				&.description
+				{
+					color:rgba(#000, 0.7);
+				}
+			}
+
+			button
+			{
+				position:relative;
+				top:15px;
+				left:12.5%;
+				width:100px;
+				height:30px;
+				background:none;
+				border-radius:15px;
+				border:1px solid rgba(#000, 0.08);
+				cursor:pointer;
+				margin:8px 0 12px 0;
+
+				i
+				{
+					color:$primarycolor;
+				}
+			}
+
+			div.tags
+			{
+				position:relative;
+				top:10px;
+				left:12.8%;
+				@include flexmixin();
+
+				p
+				{
+					border:1px solid rgba(#000, 0.08);
+					margin-right:10px;
+					font-family: 'Nanum Gothic', sans-serif;
+					border-radius:15px;
+					font-size:0.8em;
+					padding:10px;
+
+					i
+					{
+						position:relative;
+						top:-10px;
+						font-size:0.8em;
+						cursor:pointer;
+					}
+				}
+			}
+
+			input[type="submit"]
+			{
+				top:20px;
+				left:36%;
+				width:28%;
+				padding:9px 0;
+				color:#fff;
+				background:rgba($primarycolor,0.8);
+				font-family:"Nanum Gothic", sans-serif;
+				cursor:pointer;
+			}
+		}
+	}
+}
+
+.lds-ring div
+{
+  border-color:rgba(#000,0.18) transparent transparent transparent !important;	
+}

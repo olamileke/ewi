@@ -1,0 +1,550 @@
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+div.tabs {
+  position: fixed;
+  top: 16.5vh;
+  left: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 1270px) {
+  div.tabs {
+    left: 13vw;
+  }
+}
+@media (max-width: 1120px) {
+  div.tabs {
+    top: 15vh;
+    left: 8vw;
+  }
+}
+@media (max-width: 1100px) {
+  div.tabs {
+    left: 14vw;
+  }
+}
+@media (max-width: 680px) {
+  div.tabs {
+    position: relative;
+    flex-flow: row;
+    top: 0;
+    left: 0;
+    margin-bottom: 30px;
+  }
+}
+div.tabs.pos_fixed {
+  top: 8vh;
+}
+div.tabs button {
+  background: none;
+  outline: none;
+  padding: 10px;
+  border: none;
+  font-size: 1.05em;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+div.tabs button.active {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 3px 0;
+}
+@media (max-width: 680px) {
+  div.tabs button.active {
+    padding: 3px;
+  }
+}
+
+div.container {
+  width: 450px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  position: relative;
+  top: 6vh;
+  left: 34vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 1270px) {
+  div.container {
+    left: 30vw;
+  }
+}
+@media (max-width: 1120px) {
+  div.container {
+    top: 1vh;
+    left: 23vw;
+  }
+}
+@media (max-width: 1100px) {
+  div.container {
+    left: calc((100vw - 450px)/2);
+    margin-left: 3vw;
+  }
+}
+@media (max-width: 780px) {
+  div.container {
+    margin-left: 10vw;
+  }
+}
+@media (max-width: 680px) {
+  div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    top: 0;
+    left: 0;
+    align-items: center;
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+div.container li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+}
+div.container div.poems {
+  position: relative;
+  width: 450px;
+}
+@media (max-width: 480px) {
+  div.container div.poems {
+    width: 350px;
+  }
+}
+@media (max-width: 370px) {
+  div.container div.poems {
+    width: 300px;
+  }
+}
+div.container div.poems p.time {
+  float: right;
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.85em;
+}
+div.container div.poems div.poem {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  margin-bottom: 6vh;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem {
+    width: 100%;
+    height: 340px;
+  }
+}
+div.container div.poems div.poem div.main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content {
+    flex-flow: column;
+  }
+}
+div.container div.poems div.poem div.main_content div.picture {
+  width: 32%;
+  height: 180px;
+  background-position: 45% 0;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content div.picture {
+    width: 100%;
+    height: 170px;
+  }
+}
+div.container div.poems div.poem div.main_content div.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.container div.poems div.poem div.main_content div.content {
+  position: relative;
+  top: 7px;
+  width: calc(70% - 20px);
+  left: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 480px) {
+  div.container div.poems div.poem div.main_content div.content {
+    height: 100px;
+    top: -3px;
+    left: 0;
+    padding: 5px 0 0 10px;
+    width: 100%;
+  }
+}
+div.container div.poems div.poem div.main_content div.content i {
+  border: 1px solid #fff;
+}
+div.container div.poems div.poem div.main_content div.content span {
+  margin-bottom: 12px;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(1) {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) {
+  transform: translateY(-1px);
+  font-family: 'Quicksand', serif;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) a {
+  color: rgba(0, 0, 0, 0.65);
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) div {
+  position: relative;
+  top: -1px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+div.container div.poems div.poem div.main_content div.content span:nth-child(2) p {
+  position: relative;
+  top: -10px;
+}
+div.container div.poems div.poem div.main_content div.content span.type {
+  position: relative;
+  top: -30px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+}
+div.container div.poems div.poem div.main_content div.content span.type a {
+  color: rgba(0, 0, 0, 0.6);
+}
+div.container div.poems div.poem div.main_content div.content div.ratings {
+  transform: translateY(-34px);
+}
+div.container div.poems div.poem div.main_content div.content div.ratings i.far, div.container div.poems div.poem div.main_content div.content div.ratings i.fas {
+  color: rgba(255, 215, 0, 0.5);
+}
+div.container div.poems div.poem div.main_content div.content span.ratingval {
+  position: relative;
+  top: -30px;
+  left: -8px;
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.75);
+}
+div.container div.poems div.poem div.main_content div.content a.read {
+  position: relative;
+  top: -36px;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  width: 35px;
+  background: rgba(18, 97, 160, 0.85);
+  border-radius: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8em;
+}
+div.container div.people {
+  position: relative;
+  width: 450px;
+}
+@media (max-width: 480px) {
+  div.container div.people {
+    width: 380px;
+  }
+}
+@media (max-width: 400px) {
+  div.container div.people {
+    width: 310px;
+  }
+}
+div.container div.people div.person {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 12px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  background: #fefefe;
+}
+@media (max-width: 480px) {
+  div.container div.people div.person {
+    height: unset;
+    background: #fefefe;
+  }
+}
+@media (max-width: 400px) {
+  div.container div.people div.person {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+div.container div.people div.person div {
+  width: 65%;
+  margin-right: 10px;
+}
+@media (max-width: 400px) {
+  div.container div.people div.person div {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+div.container div.people button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 5px;
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid rgba(18, 97, 160, 0.6);
+  background: rgba(18, 97, 160, 0.6);
+  color: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+div.container div.people button i.fa-user-plus {
+  margin-right: 3px;
+}
+div.container div.people img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+div.container div.people p {
+  margin: 0;
+}
+div.container div.people p.name {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 2px 0 5px 0;
+  font-size: 1em;
+}
+@media (max-width: 400px) {
+  div.container div.people p.name {
+    text-align: center;
+  }
+}
+div.container div.people p.name a {
+  color: rgba(18, 97, 160, 0.8);
+}
+div.container div.people p.about {
+  font-family: 'Quicksand', sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.89em;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+div.container div.people p.info {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 400px) {
+  div.container div.people p.info {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
+div.container div.people p.info span {
+  font-size: 1.3em;
+}
+div.container div.people p a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+}
+div.container div.tags {
+  position: relative;
+  width: 450px;
+}
+div.container div.tags a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 480px) {
+  div.container div.tags {
+    width: 380px;
+  }
+}
+@media (max-width: 400px) {
+  div.container div.tags {
+    width: 310px;
+  }
+}
+div.container div.tags p {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container div.tags div.tag {
+  width: 100%;
+  height: 110px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+  background: #Fff;
+  padding: 3px 20px;
+  box-sizing: border-box;
+}
+div.container div.tags div.tag p.tagname {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 4px;
+  color: rgba(18, 97, 160, 0.7);
+}
+div.container div.tags div.tag p.date {
+  margin-bottom: 4px;
+}
+div.container div.errormsg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+div.container div.errormsg i.em-anguished {
+  font-size: 3.1em;
+}
+div.container div.errormsg span {
+  margin: 18px;
+  font-size: 1.1em;
+}
+
+div.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top: 16vh;
+  left: 76%;
+  width: 100px;
+  box-sizing: border-box;
+}
+@media (max-width: 1270px) {
+  div.sidebar {
+    left: 73%;
+  }
+}
+@media (max-width: 1120px) {
+  div.sidebar {
+    left: 70%;
+  }
+}
+@media (max-width: 1100px) {
+  div.sidebar {
+    display: none;
+  }
+}
+div.sidebar div.explore {
+  width: 275px;
+}
+div.sidebar div.explore div.message {
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+div.sidebar div.explore ul {
+  background: #fff;
+  padding: 0;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+div.sidebar div.explore ul li {
+  list-style-type: none;
+  padding: 10px 30px;
+  box-sizing: border-box;
+}
+div.sidebar div.explore ul li li:last-child {
+  border: none;
+}
+div.sidebar div.explore ul li a {
+  color: #1261A0;
+  text-decoration: none;
+  font-family: "Trebuchet MS", sans-serif;
+}
+div.sidebar ul.follows {
+  width: 275px;
+  padding: 0;
+  background: #fff;
+  padding: 15px 0 15px 30px;
+  box-sizing: border-box;
+}
+div.sidebar ul.follows a {
+  color: rgba(0, 0, 0, 0.85);
+}
+div.sidebar ul.follows li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+}
+div.sidebar ul.follows li div:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+div.sidebar ul.follows li div:nth-child(2) p {
+  transform: translateY(-15px);
+  font-family: 'PT Sans', sans-serif;
+}
+div.sidebar ul.follows li div:nth-child(2) button {
+  transform: translateY(-22px);
+  outline: none;
+  border: 1px solid #1261A0;
+  background: rgba(18, 97, 160, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-family: 'PT sans', sans-serif;
+  cursor: pointer;
+}

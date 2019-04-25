@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div.container {
+  width: 100vw;
+  height: 100vh;
+  background: url("http://127.0.0.1:8000/Images/Home/horizon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+div.container div.info {
+  position: relative;
+  margin-top: 20vh;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  div.container div.info {
+    margin-top: 25vh;
+  }
+}
+@media (max-width: 900px) {
+  div.container div.info {
+    display: none;
+  }
+}
+div.container div.info p:nth-child(1n) {
+  font-size: 3em;
+  font-family: 'Thasadith', sans-serif;
+}
+div.container div.info li {
+  position: relative;
+  left: 15px;
+  top: -15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+}
+div.container div.form-body {
+  position: relative;
+  top: calc((100vh - 470px)/2);
+  width: 300px;
+  height: 470px;
+}
+@media (max-width: 900px) {
+  div.container div.form-body {
+    width: 340px;
+  }
+}
+@media (max-width: 440px) {
+  div.container div.form-body {
+    width: 300px;
+  }
+}
+div.container div.form-body div.alert {
+  background: #EA4335;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+}
+div.container div.form-body form {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+div.container div.form-body form input {
+  margin: 10px 0 10px 0;
+  width: 75%;
+  padding: 5px 0 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+div.container div.form-body form input[type="submit"] {
+  border-radius: 2px;
+  padding: 10px 0;
+  background: #1261A0;
+  border: 1px solid #1261a0;
+  color: #Fff;
+  font-family: "Franklin Gothic", sans-serif;
+}
+div.container div.form-body form p:nth-child(1n) {
+  font-family: "Helvetica", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+div.container div.form-body form a.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+  border: 1px solid blue;
+  padding: 5px 10px;
+  width: 140px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #Fff;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+div.container div.form-body form a.fb {
+  background: #3B5998;
+  border: 1px solid #3B5998;
+}
+div.container div.form-body form a.google {
+  background: #EA4335;
+  border: 1px solid #EA4335;
+}
+div.container div.form-body form a.github {
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+div.container div.form-body form a img {
+  margin-right: 20px;
+}
+div.container div.form-body form p.signup {
+  position: relative;
+  top: -5px;
+  font-family: "Trebuchet MS", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.container div.form-body form p.signup a {
+  display: inline;
+  border: none;
+  color: rgba(18, 97, 160, 0.7);
+  text-decoration: none;
+  outline: 0;
+}

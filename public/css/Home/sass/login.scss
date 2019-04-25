@@ -1,0 +1,225 @@
+
+
+@mixin flexmixin()
+{
+	display: -webkit-box;  
+ 	display: -ms-flexbox; 
+ 	display: -moz-box;  
+  	display: -webkit-flex; 
+	display:flex;
+}
+
+@mixin Tablet()
+{
+	@media(max-width:1024px)
+	{
+		@content;
+	}
+}
+
+@mixin RemoveInfo()
+{
+	@media(max-width:900px)
+	{
+		@content;
+	}
+}
+
+@mixin SmallPhones()
+{
+	@media(max-width:440px)
+	{
+		@content;
+	}
+}
+
+
+body
+{
+	margin:0;
+	padding:0;
+}
+
+$containerwidth:300px;
+$containerheight:200px;
+
+div.container
+{
+	width:100vw;
+	height:100vh;
+	background:url("http://127.0.0.1:8000/Images/Home/horizon.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	@include flexmixin();
+	justify-content:space-around;
+
+	div.info
+	{
+		position:relative;
+		margin-top:20vh;
+		color:#fff;	
+
+		@include Tablet()
+		{
+			margin-top:25vh;
+		}
+
+		@include RemoveInfo()
+		{
+			display:none;
+		}
+
+		p:nth-child(1n)
+		{
+			font-size:3em;
+			font-family: 'Thasadith', sans-serif;
+		}
+
+		li
+		{
+			position:relative;
+			left:15px;
+			top:-15px;
+			font-family: 'Quicksand', sans-serif;
+			font-size:1.3em;
+		}
+	}
+
+
+	$form_b_width:300px;
+	$form_b_height:470px;
+
+
+	div.form-body
+	{	
+		position:relative;	
+		top:calc((100vh - 470px)/2);
+		width:$form_b_width;
+		height:$form_b_height;
+
+		@include RemoveInfo
+		{
+			width:340px;
+		}
+
+		@include SmallPhones
+		{
+			width:300px;
+		}		
+
+		$googlecolor:#EA4335;
+
+		div.alert
+		{
+			background:$googlecolor;
+			color:#fff;
+			padding:10px 0;
+			text-align: center;
+			font-family:"Helvetica", sans-serif;
+		}
+
+		form
+		{
+			position:relative;
+			width:100%;
+			background:rgba(#fff, 0.7);
+			border-radius:5px;
+			@include flexmixin();
+			flex-flow:column;
+			align-items:center;
+			padding:30px 0;
+			box-sizing:border-box;
+			margin-top:20px;
+
+			input
+			{		
+				margin:10px 0 10px 0;
+				width:75%;
+				padding:5px 0 5px 10px;
+				border:1px solid rgba(#000, 0.3);
+			}
+
+			input[type="submit"]
+			{
+				// width:60%;
+				border-radius:2px;
+				padding:10px 0;
+				background:#1261A0;
+				border:1px solid #1261a0;
+				color:#Fff;
+				font-family:"Franklin Gothic", sans-serif;
+			}
+
+			p:nth-child(1n)
+			{
+				font-family:"Helvetica", sans-serif;
+				color:rgba(#000 ,0.7);
+			}
+
+			$fbcolor:#3B5998;
+			$googlecolor:#EA4335;
+			$githubcolor:rgba(#000, 0.16);
+
+			a
+			{
+
+				&.social
+				{
+					@include flexmixin();
+					border:1px solid blue;
+					padding:5px 10px;
+					width:140px; 
+					box-sizing:border-box;
+					text-decoration:none;
+					color:#Fff;
+					font-family:"Helvetica", sans-serif;
+					margin-bottom:10px;
+					font-size:0.9em;
+				}
+
+				&.fb
+				{
+					background:$fbcolor;
+					border:1px solid  $fbcolor;
+				}
+
+				&.google
+				{
+					background:$googlecolor;
+					border:1px solid  $googlecolor;
+				}
+
+				&.github
+				{
+					background:$githubcolor;
+					border:1px solid $githubcolor;
+				}
+
+				img
+				{
+					margin-right:20px;
+				}
+			}
+
+			p.signup
+			{
+				position:relative;
+				top:-5px;
+				font-family:"Trebuchet MS", sans-serif;
+				color:rgba(#000, 0.6);
+
+				a
+				{
+
+					display:inline;
+					border:none;
+					color:rgba(#1261A0, 0.7);
+					text-decoration:none;
+					outline:0;
+				}
+			}
+		}
+	}
+
+
+}
